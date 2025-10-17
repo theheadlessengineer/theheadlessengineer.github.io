@@ -1,0 +1,25 @@
+import { render, screen } from '@testing-library/react';
+import { Card } from '../Card';
+
+describe('Card', () => {
+  it('renders children content', () => {
+    render(
+      <Card>
+        <p>Test content</p>
+      </Card>
+    );
+    expect(screen.getByText('Test content')).toBeInTheDocument();
+  });
+
+  it('applies custom className', () => {
+    render(<Card className="custom-class">Content</Card>);
+    const card = screen.getByText('Content').parentElement;
+    expect(card).toHaveClass('custom-class');
+  });
+
+  it('applies variant styles', () => {
+    render(<Card variant="elevated">Content</Card>);
+    const card = screen.getByText('Content').parentElement;
+    expect(card).toHaveClass('elevated');
+  });
+});

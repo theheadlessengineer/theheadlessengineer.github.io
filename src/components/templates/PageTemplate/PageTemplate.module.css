@@ -1,0 +1,27 @@
+.template {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.default .main {
+  padding-top: var(--spacing-5xl);
+}
+
+.fullwidth .main {
+  padding-top: 0;
+}
+
+.article .main {
+  padding-top: var(--spacing-4xl);
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}

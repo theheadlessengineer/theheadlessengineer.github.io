@@ -1,0 +1,1004 @@
+{
+  "blogTopics": [
+    {
+      "id": 1,
+      "title": "Building High-Performance E-commerce APIs with Go and GraphQL",
+      "category": "Go Development",
+      "difficulty": "intermediate",
+      "seriesPart": 1,
+      "seriesName": "Modern E-commerce Architecture",
+      "sortOrder": 1,
+      "is_posted": true
+    },
+    {
+      "id": 18,
+      "title": "Error Handling Patterns in Go: Building Resilient Applications",
+      "category": "Go Development",
+      "difficulty": "intermediate",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 8,
+      "is_posted": false
+    },
+    {
+      "id": 27,
+      "title": "Go Concurrency Patterns: Goroutines and Channels in Practice",
+      "category": "Go Development",
+      "difficulty": "advanced",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 15,
+      "is_posted": false
+    },
+    {
+      "id": 49,
+      "title": "Go Modules and Dependency Management: Best Practices",
+      "category": "Go Development",
+      "difficulty": "intermediate",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 25,
+      "is_posted": false
+    },
+    {
+      "id": 58,
+      "title": "Building Developer Tools: CLI Applications in Go",
+      "category": "Go Development",
+      "difficulty": "intermediate",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 32,
+      "is_posted": false
+    },
+    {
+      "id": 81,
+      "title": "Configuration Management in Go: Environment-Specific Settings",
+      "category": "Go Development",
+      "difficulty": "intermediate",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 45,
+      "is_posted": false
+    },
+    {
+      "id": 2,
+      "title": "Microservices Design Patterns: From Monolith to Scalable Architecture",
+      "category": "Architecture",
+      "difficulty": "advanced",
+      "seriesPart": 1,
+      "seriesName": "Microservices Mastery",
+      "sortOrder": 2,
+      "is_posted": false
+    },
+    {
+      "id": 5,
+      "title": "Event-Driven Architecture with Kafka and Go: Real-world Implementation",
+      "category": "Architecture",
+      "difficulty": "advanced",
+      "seriesPart": 2,
+      "seriesName": "Microservices Mastery",
+      "sortOrder": 5,
+      "is_posted": false
+    },
+    {
+      "id": 35,
+      "title": "Building Fault-Tolerant Systems: Circuit Breaker Pattern in Go",
+      "category": "Architecture",
+      "difficulty": "advanced",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 19,
+      "is_posted": false
+    },
+    {
+      "id": 40,
+      "title": "Service Mesh Architecture: Istio with Go Microservices",
+      "category": "Architecture",
+      "difficulty": "advanced",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 22,
+      "is_posted": false
+    },
+    {
+      "id": 47,
+      "title": "Clean Architecture in Go: Dependency Injection Patterns",
+      "category": "Architecture",
+      "difficulty": "intermediate",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 26,
+      "is_posted": false
+    },
+    {
+      "id": 51,
+      "title": "Event Sourcing Patterns in Go: Immutable Data Architecture",
+      "category": "Architecture",
+      "difficulty": "advanced",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 29,
+      "is_posted": false
+    },
+    {
+      "id": 66,
+      "title": "Message Queues: RabbitMQ vs Apache Kafka for Go Apps",
+      "category": "Architecture",
+      "difficulty": "intermediate",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 37,
+      "is_posted": false
+    },
+    {
+      "id": 72,
+      "title": "Distributed Locking Patterns in Go Microservices",
+      "category": "Architecture",
+      "difficulty": "advanced",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 41,
+      "is_posted": false
+    },
+    {
+      "id": 76,
+      "title": "Data Consistency in Distributed Systems: ACID vs BASE",
+      "category": "Architecture",
+      "difficulty": "advanced",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 43,
+      "is_posted": false
+    },
+    {
+      "id": 3,
+      "title": "AI-Enhanced Development: How Claude Code Transformed My Workflow",
+      "category": "AI Tools",
+      "difficulty": "beginner",
+      "seriesPart": 1,
+      "seriesName": "AI Developer Tools",
+      "sortOrder": 3,
+      "is_posted": false
+    },
+    {
+      "id": 9,
+      "title": "Building Multi-Agent Systems with CrewAI: A Practical Guide",
+      "category": "AI Tools",
+      "difficulty": "advanced",
+      "seriesPart": 2,
+      "seriesName": "AI Developer Tools",
+      "sortOrder": 7,
+      "is_posted": false
+    },
+    {
+      "id": 17,
+      "title": "Amazon Q vs GitHub Copilot: AI Coding Assistant Comparison",
+      "category": "AI Tools",
+      "difficulty": "beginner",
+      "seriesPart": 3,
+      "seriesName": "AI Developer Tools",
+      "sortOrder": 10,
+      "is_posted": false
+    },
+    {
+      "id": 25,
+      "title": "Gemini CLI for Code Generation: Practical Applications",
+      "category": "AI Tools",
+      "difficulty": "beginner",
+      "seriesPart": 4,
+      "seriesName": "AI Developer Tools",
+      "sortOrder": 13,
+      "is_posted": false
+    },
+    {
+      "id": 32,
+      "title": "Multi-Language Content Generation with AI Workflows",
+      "category": "AI Tools",
+      "difficulty": "intermediate",
+      "seriesPart": 2,
+      "seriesName": "Business Automation",
+      "sortOrder": 17,
+      "is_posted": false
+    },
+    {
+      "id": 52,
+      "title": "AI-Powered Code Quality Assessment: Automated Reviews",
+      "category": "AI Tools",
+      "difficulty": "intermediate",
+      "seriesPart": 5,
+      "seriesName": "AI Developer Tools",
+      "sortOrder": 30,
+      "is_posted": false
+    },
+    {
+      "id": 59,
+      "title": "Research Analysis Automation: AI-Powered Data Processing",
+      "category": "AI Tools",
+      "difficulty": "advanced",
+      "seriesPart": 4,
+      "seriesName": "Business Automation",
+      "sortOrder": 33,
+      "is_posted": false
+    },
+    {
+      "id": 10,
+      "title": "Docker Containerization Strategies for Go Microservices",
+      "category": "DevOps",
+      "difficulty": "intermediate",
+      "seriesPart": 1,
+      "seriesName": "Container Orchestration",
+      "sortOrder": 6,
+      "is_posted": false
+    },
+    {
+      "id": 14,
+      "title": "Kubernetes Deployment Patterns for Go Applications",
+      "category": "DevOps",
+      "difficulty": "advanced",
+      "seriesPart": 2,
+      "seriesName": "Container Orchestration",
+      "sortOrder": 9,
+      "is_posted": false
+    },
+    {
+      "id": 21,
+      "title": "CI/CD Pipelines for Go Applications: GitHub Actions vs GitLab CI",
+      "category": "DevOps",
+      "difficulty": "intermediate",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 12,
+      "is_posted": false
+    },
+    {
+      "id": 56,
+      "title": "Terraform for Infrastructure as Code: AWS with Go Apps",
+      "category": "DevOps",
+      "difficulty": "intermediate",
+      "seriesPart": 3,
+      "seriesName": "Container Orchestration",
+      "sortOrder": 31,
+      "is_posted": false
+    },
+    {
+      "id": 61,
+      "title": "Blue-Green Deployment Strategies for Microservices",
+      "category": "DevOps",
+      "difficulty": "advanced",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 35,
+      "is_posted": false
+    },
+    {
+      "id": 84,
+      "title": "Building Internal Developer Platforms: Tools and Culture",
+      "category": "DevOps",
+      "difficulty": "advanced",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 47,
+      "is_posted": false
+    },
+    {
+      "id": 87,
+      "title": "Building CLI Tools for Team Productivity",
+      "category": "DevOps",
+      "difficulty": "intermediate",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 49,
+      "is_posted": false
+    },
+    {
+      "id": 92,
+      "title": "Developer Experience: Building Better Internal Tools",
+      "category": "DevOps",
+      "difficulty": "intermediate",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 52,
+      "is_posted": false
+    },
+    {
+      "id": 11,
+      "title": "GraphQL Schema Design: Best Practices for E-commerce APIs",
+      "category": "API Design",
+      "difficulty": "intermediate",
+      "seriesPart": 2,
+      "seriesName": "Modern E-commerce Architecture",
+      "sortOrder": 11,
+      "is_posted": false
+    },
+    {
+      "id": 24,
+      "title": "Building RESTful APIs vs GraphQL: When to Choose What",
+      "category": "API Design",
+      "difficulty": "intermediate",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 14,
+      "is_posted": false
+    },
+    {
+      "id": 36,
+      "title": "API Rate Limiting Strategies for High-Traffic Applications",
+      "category": "API Design",
+      "difficulty": "intermediate",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 20,
+      "is_posted": false
+    },
+    {
+      "id": 57,
+      "title": "gRPC vs REST: Choosing the Right Communication Protocol",
+      "category": "API Design",
+      "difficulty": "intermediate",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 34,
+      "is_posted": false
+    },
+    {
+      "id": 63,
+      "title": "GraphQL Federation: Microservices API Gateway",
+      "category": "API Design",
+      "difficulty": "advanced",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 38,
+      "is_posted": false
+    },
+    {
+      "id": 71,
+      "title": "API Documentation: OpenAPI Specification Best Practices",
+      "category": "API Design",
+      "difficulty": "beginner",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 42,
+      "is_posted": false
+    },
+    {
+      "id": 26,
+      "title": "Spryker Framework Deep Dive: Modern E-commerce Architecture",
+      "category": "E-commerce",
+      "difficulty": "advanced",
+      "seriesPart": 1,
+      "seriesName": "E-commerce Platforms",
+      "sortOrder": 16,
+      "is_posted": false
+    },
+    {
+      "id": 33,
+      "title": "Magento to Modern Architecture: Migration Strategies",
+      "category": "E-commerce",
+      "difficulty": "advanced",
+      "seriesPart": 2,
+      "seriesName": "E-commerce Platforms",
+      "sortOrder": 18,
+      "is_posted": false
+    },
+    {
+      "id": 38,
+      "title": "Inventory Management Systems: Real-time Synchronization",
+      "category": "E-commerce",
+      "difficulty": "intermediate",
+      "seriesPart": 3,
+      "seriesName": "Modern E-commerce Architecture",
+      "sortOrder": 21,
+      "is_posted": false
+    },
+    {
+      "id": 48,
+      "title": "Multi-Vendor Platform Architecture: Scaling E-commerce",
+      "category": "E-commerce",
+      "difficulty": "advanced",
+      "seriesPart": 3,
+      "seriesName": "E-commerce Platforms",
+      "sortOrder": 27,
+      "is_posted": false
+    },
+    {
+      "id": 62,
+      "title": "Payment Gateway Integration: Security and Compliance",
+      "category": "E-commerce",
+      "difficulty": "intermediate",
+      "seriesPart": 5,
+      "seriesName": "Modern E-commerce Architecture",
+      "sortOrder": 36,
+      "is_posted": false
+    },
+    {
+      "id": 68,
+      "title": "SAP Commerce Cloud Integration: Hybrid Architecture",
+      "category": "E-commerce",
+      "difficulty": "advanced",
+      "seriesPart": 4,
+      "seriesName": "E-commerce Platforms",
+      "sortOrder": 39,
+      "is_posted": false
+    },
+    {
+      "id": 80,
+      "title": "Notification Systems: Push, Email, and SMS Integration",
+      "category": "E-commerce",
+      "difficulty": "intermediate",
+      "seriesPart": 6,
+      "seriesName": "Modern E-commerce Architecture",
+      "sortOrder": 46,
+      "is_posted": false
+    },
+    {
+      "id": 97,
+      "title": "Future of E-commerce: Headless Commerce Architecture",
+      "category": "E-commerce",
+      "difficulty": "intermediate",
+      "seriesPart": 5,
+      "seriesName": "E-commerce Platforms",
+      "sortOrder": 55,
+      "is_posted": false
+    },
+    {
+      "id": 4,
+      "title": "GDPR Compliance in Go Applications: Best Practices and Implementation",
+      "category": "Security & Compliance",
+      "difficulty": "intermediate",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 4,
+      "is_posted": false
+    },
+    {
+      "id": 20,
+      "title": "Implementing JWT Authentication in Go Microservices",
+      "category": "Security & Compliance",
+      "difficulty": "intermediate",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 23,
+      "is_posted": false
+    },
+    {
+      "id": 44,
+      "title": "Data Privacy by Design: GDPR Implementation Patterns",
+      "category": "Security & Compliance",
+      "difficulty": "advanced",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 24,
+      "is_posted": false
+    },
+    {
+      "id": 55,
+      "title": "OAuth 2.0 and OpenID Connect in Go Applications",
+      "category": "Security & Compliance",
+      "difficulty": "intermediate",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 40,
+      "is_posted": false
+    },
+    {
+      "id": 77,
+      "title": "API Security: Best Practices for Go Web Services",
+      "category": "Security & Compliance",
+      "difficulty": "intermediate",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 44,
+      "is_posted": false
+    },
+    {
+      "id": 99,
+      "title": "Zero Trust Architecture in Microservices",
+      "category": "Security & Compliance",
+      "difficulty": "advanced",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 57,
+      "is_posted": false
+    },
+    {
+      "id": 7,
+      "title": "Go vs PHP: Performance Benchmarks for E-commerce Applications",
+      "category": "Performance & Optimization",
+      "difficulty": "intermediate",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 48,
+      "is_posted": false
+    },
+    {
+      "id": 12,
+      "title": "Redis Caching Strategies for High-Traffic Applications",
+      "category": "Performance & Optimization",
+      "difficulty": "intermediate",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 50,
+      "is_posted": false
+    },
+    {
+      "id": 34,
+      "title": "Performance Optimization in Go: Memory and CPU Profiling",
+      "category": "Performance & Optimization",
+      "difficulty": "advanced",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 53,
+      "is_posted": false
+    },
+    {
+      "id": 54,
+      "title": "Caching Layers in E-commerce: Redis vs Memcached",
+      "category": "Performance & Optimization",
+      "difficulty": "intermediate",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 56,
+      "is_posted": false
+    },
+    {
+      "id": 60,
+      "title": "Load Testing Go Applications: Tools and Techniques",
+      "category": "Performance & Optimization",
+      "difficulty": "intermediate",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 58,
+      "is_posted": false
+    },
+    {
+      "id": 69,
+      "title": "Content Delivery Networks: Optimizing E-commerce Performance",
+      "category": "Performance & Optimization",
+      "difficulty": "intermediate",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 60,
+      "is_posted": false
+    },
+    {
+      "id": 15,
+      "title": "Database Connection Pooling in Go: Performance Optimization",
+      "category": "Database",
+      "difficulty": "intermediate",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 61,
+      "is_posted": false
+    },
+    {
+      "id": 19,
+      "title": "PostgreSQL vs MySQL: Choosing the Right Database for E-commerce",
+      "category": "Database",
+      "difficulty": "intermediate",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 63,
+      "is_posted": false
+    },
+    {
+      "id": 22,
+      "title": "DynamoDB with Go: NoSQL Patterns for E-commerce",
+      "category": "Database",
+      "difficulty": "intermediate",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 65,
+      "is_posted": false
+    },
+    {
+      "id": 53,
+      "title": "Database Migration Strategies: Zero-Downtime Deployments",
+      "category": "Database",
+      "difficulty": "advanced",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 67,
+      "is_posted": false
+    },
+    {
+      "id": 73,
+      "title": "Time-Series Data Management: InfluxDB with Go",
+      "category": "Database",
+      "difficulty": "intermediate",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 69,
+      "is_posted": false
+    },
+    {
+      "id": 83,
+      "title": "Database Sharding Strategies for High-Traffic Applications",
+      "category": "Database",
+      "difficulty": "advanced",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 71,
+      "is_posted": false
+    },
+    {
+      "id": 8,
+      "title": "Test-Driven Development in Go: Writing Bulletproof Microservices",
+      "category": "Testing",
+      "difficulty": "intermediate",
+      "seriesPart": 1,
+      "seriesName": "Go Testing Strategies",
+      "sortOrder": 62,
+      "is_posted": false
+    },
+    {
+      "id": 39,
+      "title": "BDD Testing with Gherkin and Go: Behavior-Driven Development",
+      "category": "Testing",
+      "difficulty": "intermediate",
+      "seriesPart": 2,
+      "seriesName": "Go Testing Strategies",
+      "sortOrder": 64,
+      "is_posted": false
+    },
+    {
+      "id": 65,
+      "title": "Chaos Engineering: Testing System Resilience",
+      "category": "Testing",
+      "difficulty": "advanced",
+      "seriesPart": 3,
+      "seriesName": "Go Testing Strategies",
+      "sortOrder": 66,
+      "is_posted": false
+    },
+    {
+      "id": 28,
+      "title": "Team Leadership in Tech: Mentoring Engineers Effectively",
+      "category": "Leadership & Management",
+      "difficulty": "intermediate",
+      "seriesPart": 1,
+      "seriesName": "Tech Leadership",
+      "sortOrder": 68,
+      "is_posted": false
+    },
+    {
+      "id": 29,
+      "title": "Agile vs Lean Kanban: Choosing the Right Methodology",
+      "category": "Leadership & Management",
+      "difficulty": "beginner",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 70,
+      "is_posted": false
+    },
+    {
+      "id": 31,
+      "title": "Code Review Best Practices: Building Quality Culture",
+      "category": "Leadership & Management",
+      "difficulty": "intermediate",
+      "seriesPart": 2,
+      "seriesName": "Tech Leadership",
+      "sortOrder": 72,
+      "is_posted": false
+    },
+    {
+      "id": 50,
+      "title": "Incident Response and Post-Mortem Culture in Tech Teams",
+      "category": "Leadership & Management",
+      "difficulty": "intermediate",
+      "seriesPart": 3,
+      "seriesName": "Tech Leadership",
+      "sortOrder": 74,
+      "is_posted": false
+    },
+    {
+      "id": 64,
+      "title": "Technical Debt Management: Strategies for Legacy Systems",
+      "category": "Leadership & Management",
+      "difficulty": "intermediate",
+      "seriesPart": 4,
+      "seriesName": "Tech Leadership",
+      "sortOrder": 76,
+      "is_posted": false
+    },
+    {
+      "id": 75,
+      "title": "Cross-Functional Team Collaboration: Engineering Best Practices",
+      "category": "Leadership & Management",
+      "difficulty": "intermediate",
+      "seriesPart": 5,
+      "seriesName": "Tech Leadership",
+      "sortOrder": 78,
+      "is_posted": false
+    },
+    {
+      "id": 23,
+      "title": "Monitoring and Observability in Go Microservices",
+      "category": "Monitoring & Observability",
+      "difficulty": "advanced",
+      "seriesPart": 3,
+      "seriesName": "Microservices Mastery",
+      "sortOrder": 73,
+      "is_posted": false
+    },
+    {
+      "id": 37,
+      "title": "Distributed Tracing in Microservices: Jaeger and Zipkin",
+      "category": "Monitoring & Observability",
+      "difficulty": "advanced",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 75,
+      "is_posted": false
+    },
+    {
+      "id": 45,
+      "title": "Prometheus Monitoring for Go Applications: Metrics That Matter",
+      "category": "Monitoring & Observability",
+      "difficulty": "intermediate",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 77,
+      "is_posted": false
+    },
+    {
+      "id": 6,
+      "title": "n8n Workflow Automation: Building Business Process Pipelines",
+      "category": "Business Automation",
+      "difficulty": "intermediate",
+      "seriesPart": 1,
+      "seriesName": "Business Automation",
+      "sortOrder": 79,
+      "is_posted": false
+    },
+    {
+      "id": 42,
+      "title": "Order Processing Automation: PDF to Database Pipeline",
+      "category": "Business Automation",
+      "difficulty": "intermediate",
+      "seriesPart": 3,
+      "seriesName": "Business Automation",
+      "sortOrder": 81,
+      "is_posted": false
+    },
+    {
+      "id": 30,
+      "title": "Vector Databases and AI: Implementing Semantic Search in Go",
+      "category": "AI & Machine Learning",
+      "difficulty": "advanced",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 80,
+      "is_posted": false
+    },
+    {
+      "id": 74,
+      "title": "Building Recommendation Engines: ML in E-commerce",
+      "category": "AI & Machine Learning",
+      "difficulty": "advanced",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 82,
+      "is_posted": false
+    },
+    {
+      "id": 82,
+      "title": "Machine Learning Model Serving with Go",
+      "category": "AI & Machine Learning",
+      "difficulty": "advanced",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 84,
+      "is_posted": false
+    },
+    {
+      "id": 13,
+      "title": "AWS Lambda with Go: Serverless E-commerce Functions",
+      "category": "Cloud & Serverless",
+      "difficulty": "intermediate",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 83,
+      "is_posted": false
+    },
+    {
+      "id": 78,
+      "title": "Serverless Go Functions: AWS Lambda vs Google Cloud",
+      "category": "Cloud & Serverless",
+      "difficulty": "intermediate",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 85,
+      "is_posted": false
+    },
+    {
+      "id": 86,
+      "title": "Cost Optimization in AWS: Right-Sizing Go Applications",
+      "category": "Cloud & Serverless",
+      "difficulty": "intermediate",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 87,
+      "is_posted": false
+    },
+    {
+      "id": 16,
+      "title": "Building Real-time Applications with WebSockets and Go",
+      "category": "Real-time & Communication",
+      "difficulty": "intermediate",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 86,
+      "is_posted": false
+    },
+    {
+      "id": 46,
+      "title": "GraphQL Subscriptions: Real-time Data in E-commerce",
+      "category": "Real-time & Communication",
+      "difficulty": "advanced",
+      "seriesPart": 4,
+      "seriesName": "Modern E-commerce Architecture",
+      "sortOrder": 88,
+      "is_posted": false
+    },
+    {
+      "id": 88,
+      "title": "WebRTC Implementation: Real-time Communication in Go",
+      "category": "Real-time & Communication",
+      "difficulty": "advanced",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 90,
+      "is_posted": false
+    },
+    {
+      "id": 43,
+      "title": "WebAssembly with Go: Running Go in the Browser",
+      "category": "Web Development",
+      "difficulty": "advanced",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 89,
+      "is_posted": false
+    },
+    {
+      "id": 85,
+      "title": "Progressive Web Apps with Go Backend Services",
+      "category": "Web Development",
+      "difficulty": "intermediate",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 91,
+      "is_posted": false
+    },
+    {
+      "id": 93,
+      "title": "Internationalization (i18n) in Go Web Applications",
+      "category": "Web Development",
+      "difficulty": "intermediate",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 93,
+      "is_posted": false
+    },
+    {
+      "id": 67,
+      "title": "Search Engine Implementation: Elasticsearch with Go",
+      "category": "Specialized Technologies",
+      "difficulty": "intermediate",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 92,
+      "is_posted": false
+    },
+    {
+      "id": 70,
+      "title": "Feature Flags and A/B Testing in Go Applications",
+      "category": "Specialized Technologies",
+      "difficulty": "intermediate",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 94,
+      "is_posted": false
+    },
+    {
+      "id": 79,
+      "title": "Building Multi-Tenant SaaS Applications in Go",
+      "category": "Specialized Technologies",
+      "difficulty": "advanced",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 96,
+      "is_posted": false
+    },
+    {
+      "id": 89,
+      "title": "Mobile Backend Services: Go APIs for Mobile Apps",
+      "category": "Specialized Technologies",
+      "difficulty": "intermediate",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 98,
+      "is_posted": false
+    },
+    {
+      "id": 90,
+      "title": "Blockchain Integration: Smart Contracts with Go",
+      "category": "Specialized Technologies",
+      "difficulty": "advanced",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 100,
+      "is_posted": false
+    },
+    {
+      "id": 95,
+      "title": "Career Growth in Tech: From Engineer to Architect",
+      "category": "Career & Industry",
+      "difficulty": "beginner",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 95,
+      "is_posted": false
+    },
+    {
+      "id": 96,
+      "title": "Open Source Contribution: Building Your Tech Brand",
+      "category": "Career & Industry",
+      "difficulty": "beginner",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 97,
+      "is_posted": false
+    },
+    {
+      "id": 98,
+      "title": "Green Software Development: Energy-Efficient Go Applications",
+      "category": "Career & Industry",
+      "difficulty": "intermediate",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 99,
+      "is_posted": false
+    },
+    {
+      "id": 91,
+      "title": "Edge Computing with Go: CDN and Edge Functions",
+      "category": "Emerging Technologies",
+      "difficulty": "advanced",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 59,
+      "is_posted": false
+    },
+    {
+      "id": 94,
+      "title": "Building Data Pipelines: ETL with Go and Apache Airflow",
+      "category": "Data Engineering",
+      "difficulty": "advanced",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 54,
+      "is_posted": false
+    },
+    {
+      "id": 41,
+      "title": "Git Workflows for Large Teams: Best Practices and Automation",
+      "category": "Version Control",
+      "difficulty": "intermediate",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 28,
+      "is_posted": false
+    },
+    {
+      "id": 100,
+      "title": "Building the Next Generation of E-commerce: Trends and Predictions",
+      "category": "Future Tech",
+      "difficulty": "intermediate",
+      "seriesPart": null,
+      "seriesName": null,
+      "sortOrder": 51,
+      "is_posted": false
+    }
+  ]
+}

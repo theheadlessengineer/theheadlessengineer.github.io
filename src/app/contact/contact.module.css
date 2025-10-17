@@ -1,0 +1,118 @@
+/* Contact page specific styles - Desktop only */
+@media (min-width: 769px) {
+  :global(body.contact-layout .app-layout) {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  :global(body.contact-layout .main-content) {
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  .contactPage {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-lg);
+    background: var(--color-background);
+  }
+}
+
+/* Mobile: Allow normal scrolling */
+@media (max-width: 768px) {
+  :global(body.contact-layout .app-layout) {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  :global(body.contact-layout .main-content) {
+    height: auto;
+    overflow: visible;
+  }
+
+  .contactPage {
+    height: auto;
+    min-height: calc(100vh - 160px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-lg);
+    background: var(--color-background);
+  }
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  text-align: left;
+}
+
+.greeting {
+  max-width: 600px;
+}
+
+.title {
+  font-size: clamp(var(--font-size-3xl), 4vw, var(--font-size-4xl));
+  font-weight: 900;
+  color: var(--color-text);
+  margin: 0 0 var(--spacing-md) 0;
+  line-height: var(--line-height-tight);
+}
+
+.subtitle {
+  font-size: var(--font-size-base);
+  color: var(--color-text-light);
+  margin: 0;
+  line-height: var(--line-height-relaxed);
+}
+
+.methodsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-lg);
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 980px) {
+  .contactPage {
+    padding: var(--spacing-md);
+  }
+  
+  .container {
+    gap: var(--spacing-lg);
+  }
+  
+  .methodsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+  }
+}
+
+@media (max-width: 736px) {
+  .contactPage {
+    padding: var(--spacing-sm);
+  }
+  
+  .container {
+    gap: var(--spacing-md);
+  }
+  
+  .title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .subtitle {
+    font-size: var(--font-size-sm);
+  }
+  
+  .methodsGrid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+  }
+}

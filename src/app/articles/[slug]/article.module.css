@@ -1,0 +1,321 @@
+.article {
+  padding: var(--spacing-2xl) 0;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-xl);
+  font-size: var(--font-size-sm);
+  flex-wrap: wrap;
+}
+
+.backLink {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--easing-ease);
+}
+
+.backLink:hover {
+  color: var(--color-accent);
+}
+
+.breadcrumbSeparator {
+  color: var(--color-text-light);
+}
+
+.breadcrumbCurrent {
+  color: var(--color-text-light);
+}
+
+.header {
+  margin-bottom: var(--spacing-2xl);
+  text-align: left;
+}
+
+.title {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-text);
+}
+
+.meta {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+}
+
+.date {
+  font-weight: 500;
+}
+
+.readingTime {
+  position: relative;
+}
+
+.readingTime::before {
+  content: '•';
+  margin-right: var(--spacing-sm);
+}
+
+.tags {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.tag {
+  background: var(--color-background);
+  color: var(--color-primary);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-primary);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.content {
+  line-height: 1.7;
+}
+
+.relatedSection {
+  background: var(--color-background-alt);
+  padding: var(--spacing-2xl) 0;
+  margin-top: var(--spacing-2xl);
+}
+
+.relatedTitle {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+}
+
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .title {
+    font-size: var(--font-size-xl);
+  }
+  
+  .meta {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+  
+  .readingTime::before {
+    display: none;
+  }
+  
+  .breadcrumb {
+    font-size: var(--font-size-xs);
+  }
+}
+
+/* Code Styling - GitHub Dark Theme */
+.content pre, .content code {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+.content code {
+  background: var(--github-dark-surface);
+  color: var(--github-dark-text);
+  padding: 0.2em 0.4em;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--github-dark-border);
+}
+
+.content pre {
+  background: var(--github-dark-bg);
+  color: var(--github-dark-text);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--github-dark-border);
+  overflow-x: auto;
+  margin: var(--spacing-md) 0;
+}
+
+.content pre code {
+  background: transparent;
+  color: var(--github-dark-text);
+  padding: 0;
+  border: none;
+  border-radius: 0;
+}
+
+/* GitHub Dark Syntax Highlighting - Higher specificity */
+.content pre .hljs-comment { 
+  color: var(--github-dark-comment) !important; 
+  font-style: italic;
+}
+
+.content pre .hljs-keyword { 
+  color: var(--github-dark-keyword) !important; 
+  font-weight: 600; 
+}
+
+.content pre .hljs-string { 
+  color: var(--github-dark-string) !important; 
+}
+
+.content pre .hljs-number { 
+  color: var(--github-dark-number) !important; 
+}
+
+.content pre .hljs-function,
+.content pre .hljs-title { 
+  color: var(--github-dark-function) !important; 
+}
+
+.content pre .hljs-built_in,
+.content pre .hljs-builtin-name { 
+  color: var(--github-dark-function) !important; 
+}
+
+.content pre .hljs-variable,
+.content pre .hljs-name { 
+  color: var(--github-dark-variable) !important; 
+}
+
+.content pre .hljs-type { 
+  color: var(--github-dark-class) !important; 
+}
+
+.content pre .hljs-property,
+.content pre .hljs-attr { 
+  color: var(--github-dark-property) !important; 
+}
+
+.content pre .hljs-literal,
+.content pre .hljs-boolean { 
+  color: var(--github-dark-boolean) !important; 
+}
+
+.content pre .hljs-operator,
+.content pre .hljs-symbol { 
+  color: var(--github-dark-operator) !important; 
+}
+
+.content pre .hljs-punctuation { 
+  color: var(--github-dark-punctuation) !important; 
+}
+
+.content pre .hljs-tag { 
+  color: var(--github-dark-keyword) !important; 
+}
+
+/* Handle compound classes like "hljs-title class_" */
+.content pre span[class*="hljs-title"] { 
+  color: var(--github-dark-function) !important; 
+  font-weight: 600;
+}
+
+.content pre span[class*="hljs-class"] { 
+  color: var(--github-dark-class) !important; 
+}
+
+.content pre span[class*="hljs-function"] { 
+  color: var(--github-dark-function) !important; 
+}
+
+.content pre span[class*="hljs-keyword"] { 
+  color: var(--github-dark-keyword) !important; 
+  font-weight: 600;
+}
+
+.content pre span[class*="hljs-string"] { 
+  color: var(--github-dark-string) !important; 
+}
+
+.content pre span[class*="hljs-number"] { 
+  color: var(--github-dark-number) !important; 
+}
+
+.content pre span[class*="hljs-comment"] { 
+  color: var(--github-dark-comment) !important; 
+  font-style: italic;
+}
+
+.content pre span[class*="hljs-variable"] { 
+  color: var(--github-dark-variable) !important; 
+}
+
+.content pre span[class*="hljs-type"] { 
+  color: var(--github-dark-class) !important; 
+}
+
+.content pre span[class*="hljs-property"] { 
+  color: var(--github-dark-property) !important; 
+}
+
+.content pre span[class*="hljs-attr"] { 
+  color: var(--github-dark-property) !important; 
+}
+
+.content pre span[class*="hljs-literal"] { 
+  color: var(--github-dark-boolean) !important; 
+}
+
+.content pre span[class*="hljs-boolean"] { 
+  color: var(--github-dark-boolean) !important; 
+}
+
+.content pre span[class*="hljs-operator"] { 
+  color: var(--github-dark-operator) !important; 
+}
+
+.content pre span[class*="hljs-built_in"] { 
+  color: var(--github-dark-function) !important; 
+}
+
+.content pre span[class*="hljs-tag"] { 
+  color: var(--github-dark-keyword) !important; 
+}
+
+/* Theme-aware adjustments */
+:global(.invert) .content code {
+  background: transparent;
+  color: var(--github-dark-text);
+  border: none;
+}
+
+:global(.invert) .content pre {
+  background: var(--github-dark-bg);
+  color: var(--github-dark-text);
+  border: 1px solid var(--github-dark-border);
+}
+
+/* Article content links - styled like offcanvas menu links */
+.content a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 400;
+  text-transform: uppercase;
+  transition: color var(--duration-fast) var(--easing-ease),
+              padding-left var(--duration-fast) var(--easing-ease);
+  display: inline-block;
+}
+
+.content a:hover {
+  color: var(--color-primary);
+  padding-left: var(--spacing-sm);
+}

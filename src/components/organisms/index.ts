@@ -1,0 +1,14 @@
+export { Header } from './Header';
+export { Footer } from './Footer';
+export { Spotlight } from './Spotlight';
+export { BurgerMenu } from './BurgerMenu';
+export { Hero } from './Hero';
+export { CoreServices } from './CoreServices';
+export { MasonryGrid } from './MasonryGrid';
+export { Metrics } from './Metrics';
+export { ProjectShowcase } from './ProjectShowcase';
+export { Expertise } from './Expertise';
+export { Certifications } from './Certifications';
+export { CTA } from './CTA';
+export { Principles } from './Principles';
+export { FAQ } from './FAQ';

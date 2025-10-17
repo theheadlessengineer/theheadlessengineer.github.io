@@ -1,0 +1,13 @@
+.logo {
+  font-family: var(--font-family-logo);
+  font-size: var(--font-size-3xl);
+  font-weight: normal;
+  color: var(--color-text);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  transition: color var(--duration-fast) var(--easing-ease);
+}
+
+.logo:hover {
+  color: var(--color-primary);
+}

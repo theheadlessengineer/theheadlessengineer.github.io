@@ -1,0 +1,8 @@
+.sectionHeader {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.sectionAlt {
+  background: var(--color-background-alt);
+}

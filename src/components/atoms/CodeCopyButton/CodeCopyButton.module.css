@@ -1,0 +1,29 @@
+.copyButton {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--duration-fast) var(--easing-ease);
+  z-index: 10;
+  opacity: 0.7;
+  color: var(--color-text);
+}
+
+.copyButton:hover {
+  opacity: 1;
+  background: var(--color-primary);
+  color: var(--color-background);
+  border-color: var(--color-primary);
+}
+
+.copyButton svg {
+  width: 16px;
+  height: 16px;
+}

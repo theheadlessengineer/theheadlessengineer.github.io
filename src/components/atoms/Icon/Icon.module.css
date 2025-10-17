@@ -1,0 +1,134 @@
+.icon {
+  display: inline-block;
+  color: var(--color-primary);
+  text-align: center;
+  line-height: 1;
+}
+
+.icon i {
+  font-style: normal;
+}
+
+/* Size variants */
+.small {
+  font-size: var(--font-size-base);
+  width: var(--font-size-base);
+  height: var(--font-size-base);
+}
+
+.medium {
+  font-size: var(--font-size-xl);
+  width: var(--font-size-xl);
+  height: var(--font-size-xl);
+}
+
+.large {
+  font-size: var(--font-size-3xl);
+  width: var(--font-size-3xl);
+  height: var(--font-size-3xl);
+}
+
+.xlarge {
+  font-size: 48px;
+  width: 48px;
+  height: 48px;
+}
+
+/* Variant styles */
+.default {
+  /* Base icon styling */
+}
+
+.circle {
+  border-radius: 50%;
+  border: 1px solid var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.circle:hover {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.solid {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Circle size adjustments */
+.circle.small {
+  width: var(--size-lg);
+  height: var(--size-lg);
+  font-size: var(--font-size-sm);
+}
+
+.circle.medium {
+  width: var(--size-md);
+  height: var(--size-md);
+  font-size: var(--font-size-base);
+}
+
+.circle.large {
+  width: var(--size-2xl);
+  height: var(--size-2xl);
+  font-size: var(--font-size-xl);
+}
+
+.circle.xlarge {
+  width: var(--size-3xl);
+  height: var(--size-3xl);
+  font-size: var(--font-size-3xl);
+}
+
+/* Solid size adjustments */
+.solid.small {
+  width: var(--icon-sm);
+  height: var(--icon-sm);
+  font-size: var(--font-size-base);
+}
+
+.solid.medium {
+  width: var(--icon-md);
+  height: var(--icon-md);
+  font-size: var(--font-size-xl);
+}
+
+.solid.large {
+  width: var(--icon-lg);
+  height: var(--icon-lg);
+  font-size: var(--font-size-3xl);
+}
+
+.solid.xlarge {
+  width: var(--icon-xl);
+  height: var(--icon-xl);
+  font-size: var(--font-size-4xl);
+}
+
+/* Theme support */
+.invert .icon {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.invert .circle {
+  border-color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.invert .circle:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: var(--color-accent);
+}
+
+.invert .solid {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: var(--color-accent);
+}

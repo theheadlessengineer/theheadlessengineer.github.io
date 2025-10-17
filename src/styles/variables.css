@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@font-face {
+    font-family: 'Kajoly';
+    src: url('./font/Kajoly.woff') format('woff'),
+    url('./font/Kajoly.ttf') format('truetype'),
+    url('./font/Kajoly.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+
+    /* Color Scheme Variations */
+    --color-0: #fffdf7;
+    --color-1: #256FFF; /* Blue (Primary) */
+    --color-2: #ff6b6b; /* Red/Pink */
+    --color-3: #6cc04a; /* Green */
+    --color-4: #ffd43b; /* Yellow */
+    --color-5: #9775fa; /* Purple */
+    --color-6: #51cf66; /* Light Green */
+    --color-7: #ff8cc8; /* Pink */
+    --color-8: #1b1b1b;
+    --color-9: #704d37;
+
+    /* Base Colors */
+    --color-background: var(--color-0);
+    --color-primary: var(--color-9);
+    --color-accent: var(--color-2);
+    --color-text: var(--color-8);
+    --color-text-light: #7a8288;
+    --color-border: var(--color-8);
+    --color-footer-bg: var(--color-8);
+
+    /* Typography */
+    --font-family-primary: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-family-logo: "Kajoly", serif;
+
+    --font-size-xs: 8px;
+    --font-size-sm: 12px;
+    --font-size-base: 16px;
+    --font-size-lg: 20px;
+    --font-size-xl: 24px;
+    --font-size-2xl: 28px;
+    --font-size-3xl: 32px;
+    --font-size-4xl: 48px;
+    --font-size-5xl: 56px;
+
+    /* Spacing */
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+    --spacing-2xl: 64px;
+    --spacing-3xl: 96px;
+
+    /* Letter spacing */
+    --letter-spacing-wide: 3.6px;
+
+    /* Component Sizes */
+    --size-xs: 20px;
+    --size-sm: 28px;
+    --size-md: 32px;
+    --size-lg: 40px;
+    --size-xl: 48px;
+    --size-2xl: 56px;
+    --size-3xl: 64px;
+    --size-4xl: 72px;
+    --size-5xl: 96px;
+
+    /* Icon Sizes */
+    --icon-sm: 40px;
+    --icon-md: 56px;
+    --icon-lg: 72px;
+    --icon-xl: 96px;
+
+    /* Breakpoints */
+    --breakpoint-xxsmall: 360px;
+    --breakpoint-xsmall: 480px;
+    --breakpoint-small: 736px;
+    --breakpoint-medium: 980px;
+    --breakpoint-large: 1280px;
+    --breakpoint-xlarge: 1680px;
+
+    /* Animations */
+    --duration-fast: 0.15s;
+    --duration-normal: 0.3s;
+    --duration-slow: 0.6s;
+
+    --easing-ease: ease;
+    --easing-ease-in: ease-in;
+    --easing-ease-out: ease-out;
+    --easing-ease-in-out: ease-in-out;
+
+    /* Layout */
+    --container-max-width: 1200px;
+    --container-padding: var(--spacing-lg);
+
+    /* Shadow System */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.15);
+    --shadow-xl: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+    /* Border radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    --radius-full: 50%;
+
+    /* GitHub Dark Theme Colors for Code Blocks */
+    --github-dark-bg: #0d1117;
+    --github-dark-surface: #161b22;
+    --github-dark-border: #30363d;
+    --github-dark-text: #e6edf3;
+    --github-dark-comment: #8b949e;
+    --github-dark-keyword: #ff7b72;
+    --github-dark-string: #a5d6ff;
+    --github-dark-number: #79c0ff;
+    --github-dark-function: #d2a8ff;
+    --github-dark-operator: #ff7b72;
+    --github-dark-punctuation: #e6edf3;
+    --github-dark-property: #79c0ff;
+    --github-dark-boolean: #79c0ff;
+    --github-dark-class: #ffa657;
+    --github-dark-variable: #ffa657;
+
+    /* Z-index */
+    --z-dropdown: 1000;
+    --z-sticky: 1020;
+    --z-fixed: 1030;
+    --z-modal-backdrop: 1040;
+    --z-modal: 1050;
+    --z-popover: 1060;
+    --z-tooltip: 1070;
+    --z-burger-menu: 1080;
+
+    /* Universal Card Grid System */
+    --card-grid-gap: var(--spacing-lg);
+    --card-min-width: 280px;
+}
+
+/* Base styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    margin: 0;
+    padding: 0;
+}
+
+.section {
+    padding: var(--spacing-2xl) 0;
+}
+
+.container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+    width: 100%;
+}
+
+.major {
+    font-size: var(--font-size-base);
+    font-weight: 300;
+    color: var(--color-text-light);
+    margin: 0 0 var(--spacing-lg) 0;
+}
+
+/* Universal Card Grid Classes */
+.card-grid {
+    display: grid;
+    gap: var(--card-grid-gap);
+    width: 100%;
+}
+
+/* Rule 1: If odd count < 5, show all in one row */
+.card-grid-1 {
+    grid-template-columns: 1fr;
+}
+
+.card-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Rule 2: Max 3 cards per row, but 2 cards take full width */
+.card-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.card-grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.card-grid-5,
+.card-grid-6,
+.card-grid-7,
+.card-grid-8,
+.card-grid-9 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Responsive adjustments */
+@media (max-width: 980px) {
+    .card-grid-3,
+    .card-grid-4,
+    .card-grid-5,
+    .card-grid-6,
+    .card-grid-7,
+    .card-grid-8,
+    .card-grid-9 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 736px) {
+    .card-grid,
+    .card-grid-2,
+    .card-grid-3,
+    .card-grid-4,
+    .card-grid-5,
+    .card-grid-6,
+    .card-grid-7,
+    .card-grid-8,
+    .card-grid-9 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Color scheme modifier classes */
+.color1 {
+    --theme-color: var(--color-1);
+}
+
+.color2 {
+    --theme-color: var(--color-2);
+}
+
+.color3 {
+    --theme-color: var(--color-3);
+}
+
+.color4 {
+    --theme-color: var(--color-4);
+}
+
+.color5 {
+    --theme-color: var(--color-5);
+}
+
+.color6 {
+    --theme-color: var(--color-6);
+}
+
+.color7 {
+    --theme-color: var(--color-7);
+}
+
+/* Invert theme */
+.invert {
+    --color-background: var(--color-8);
+    --color-text: var(--color-0);
+    --color-text-light: #cccccc;
+    --color-border: rgba(255, 255, 255, 0.1);
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.3);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 980px) {
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+
+    .section {
+        padding: var(--spacing-xl) 0;
+    }
+}
+
+@media (max-width: 736px) {
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+
+    .section {
+        padding: var(--spacing-lg) 0;
+    }
+}

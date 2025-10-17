@@ -1,0 +1,121 @@
+/* Desktop Footer */
+.desktopFooter {
+  background: var(--color-footer-bg);
+  padding: var(--spacing-xl) 0;
+  transition: background 0.3s ease;
+}
+
+.transparent {
+  background: transparent !important;
+}
+
+.container {
+  width: 100%;
+  padding: 0 var(--container-padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation {
+  display: flex;
+  gap: var(--spacing-lg);
+  align-items: center;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  font-size: var(--font-size-base);
+  text-transform: uppercase;
+  transition: color var(--duration-fast) var(--easing-ease);
+}
+
+.link:hover {
+  color: var(--color-primary);
+}
+
+.logo {
+  color: white;
+}
+
+.logo:hover {
+  color: var(--color-primary);
+}
+
+/* Mobile Footer - App Style */
+.mobileFooter {
+  display: none;
+}
+
+/* Show mobile footer on mobile, hide desktop */
+@media (max-width: 768px) {
+  .desktopFooter {
+    display: none;
+  }
+
+  .mobileFooter {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--color-background);
+    border-top: 1px solid var(--color-border);
+    padding: var(--spacing-sm) 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .mobileNavigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+  }
+
+  .mobileNavItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-text-light);
+    transition: color var(--duration-fast) var(--easing-ease);
+    padding: var(--spacing-xs);
+    min-width: 60px;
+  }
+
+  .mobileNavItem:hover,
+  .mobileNavItem:active {
+    color: var(--color-primary);
+  }
+
+  .mobileNavLabel {
+    font-size: var(--font-size-xs);
+    margin-top: 4px;
+    font-weight: 500;
+  }
+
+  /* Add bottom padding to body to account for fixed footer */
+  :global(body) {
+    padding-bottom: 70px;
+  }
+}
+
+/* Tablet - still show desktop footer */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    text-align: center;
+  }
+  
+  .navigation {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-md);
+  }
+}

@@ -1,0 +1,125 @@
+.button {
+  appearance: none;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  height: var(--size-2xl);
+  letter-spacing: var(--letter-spacing-wide);
+  line-height: var(--size-2xl);
+  padding: 0 var(--spacing-lg);
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Primary variant - starts filled, becomes outline on hover */
+.primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border: 1px solid var(--color-primary);
+}
+
+.primary:hover {
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+.primary:active {
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+/* Outline variant - starts outline, becomes filled on hover */
+.outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+.outline:hover {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.outline:active {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+/* Size variants */
+.small {
+  font-size: var(--font-size-xs);
+  height: var(--size-lg);
+  line-height: var(--size-lg);
+  padding: 0 var(--spacing-md);
+}
+
+.medium {
+  /* Uses base button styles */
+}
+
+.large {
+  font-size: var(--font-size-base);
+  height: var(--size-3xl);
+  line-height: var(--size-3xl);
+  padding: 0 var(--spacing-xl);
+}
+
+/* Disabled state */
+.button:disabled {
+  pointer-events: none;
+  opacity: 0.25;
+}
+
+/* Focus styles for accessibility */
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Dark theme adjustments */
+.invert .primary {
+  background-color: #ffffff;
+  color: var(--color-accent);
+  border: 1px solid #ffffff;
+}
+
+.invert .primary:hover {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid var(--color-border);
+}
+
+.invert .primary:active {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid var(--color-border);
+}
+
+.invert .outline {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid var(--color-border);
+}
+
+.invert .outline:hover {
+  background-color: #ffffff;
+  color: var(--color-accent);
+  border: 1px solid #ffffff;
+}
+
+.invert .outline:active {
+  background-color: #ffffff;
+  color: var(--color-accent);
+  border: 1px solid #ffffff;
+}

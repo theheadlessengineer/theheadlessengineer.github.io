@@ -1,0 +1,30 @@
+.card {
+  display: block;
+  padding: var(--spacing-md);
+  background: var(--color-background);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--duration-normal) var(--easing-ease);
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+  transform: translateY(0);
+}
+
+.card:hover,
+.cardHover:hover {
+  box-shadow: var(--shadow-sm);
+}
+
+.card:focus {
+  outline: none;
+}
+
+.card:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}

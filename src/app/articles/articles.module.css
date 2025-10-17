@@ -1,0 +1,13 @@
+.section {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  font-size: var(--font-size-3xl);
+  font-weight: 900;
+  color: var(--color-text);
+  margin: 0 0 var(--spacing-lg) 0;
+  text-align: left;
+}

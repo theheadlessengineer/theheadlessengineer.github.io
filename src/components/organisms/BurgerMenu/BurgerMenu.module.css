@@ -1,0 +1,90 @@
+.burgerButton {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--color-primary);
+  transition: color var(--duration-fast) var(--easing-ease);
+}
+
+.burgerButton:hover {
+  color: var(--color-accent);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: var(--z-burger-menu);
+}
+
+.offcanvas {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 50vw;
+  background: var(--color-background);
+  box-shadow: var(--shadow-xl);
+  z-index: calc(var(--z-burger-menu) + 1);
+  transform: translateX(100%);
+  transition: transform var(--duration-normal) var(--easing-ease-out);
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  overflow-y: auto;
+}
+
+.offcanvas.open {
+  transform: translateX(0);
+}
+
+.closeButton {
+  position: absolute;
+  top: var(--spacing-lg);
+  right: var(--spacing-lg);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text);
+  transition: color var(--duration-fast) var(--easing-ease);
+}
+
+.closeButton:hover {
+  color: var(--color-primary);
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--spacing-2xl);
+}
+
+.menuItemWrapper {
+  margin-bottom: var(--spacing-lg);
+}
+
+.menuItem {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: var(--font-size-lg);
+  font-weight: 400;
+  text-transform: uppercase;
+  transition: color var(--duration-fast) var(--easing-ease);
+  display: inline;
+}
+
+.menuItem:hover {
+  color: var(--color-primary);
+}
+
+@media (max-width: 980px) {
+  .offcanvas {
+    width: 100vw;
+  }
+  
+  .closeButton {
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+  }
+}
