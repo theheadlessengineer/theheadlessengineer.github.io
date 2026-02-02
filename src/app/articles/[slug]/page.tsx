@@ -7,9 +7,9 @@ import { CodeCopyButton } from '@/components/atoms';
 import styles from './article.module.css';
 
 interface ArticlePageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {

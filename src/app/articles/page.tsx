@@ -10,11 +10,11 @@ export default async function ArticlesPage() {
 
   return (
     <div>
-      <Hero config={heroConfigs.articles} />
+      {/*<Hero config={heroConfigs.articles} />*/}
       
       <section id="articles-content" className={`section ${styles.section}`}>
         <div className="container">
-          <h2 className={styles.title}>LATEST ENGINEERING INSIGHTS</h2>
+          {/*<h2 className={styles.title}>LATEST ENGINEERING INSIGHTS</h2>*/}
           <MasonryGrid posts={posts} />
         </div>
       </section>

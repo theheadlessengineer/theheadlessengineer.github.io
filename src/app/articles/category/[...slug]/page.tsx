@@ -5,9 +5,9 @@ import { MasonryGrid } from '@/components/organisms';
 import styles from '../category.module.css';
 
 interface CategoryPageProps {
-  params: {
+  params: Promise<{
     slug: string[];
-  };
+  }>;
 }
 
 // Category descriptions mapping

@@ -4,7 +4,6 @@ import React, { useEffect } from 'react';
 import { Hero, Spotlight, CoreServices, Metrics, CTA } from '@/components/organisms';
 import { heroConfigs, spotlightConfigs, pageConfigs } from '@/config/content';
 import { profileConfig } from '@/config/profile';
-import styles from './page.module.css';
 
 export default function HomePage() {
   useEffect(() => {
@@ -13,7 +12,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div id="wrapper" className={styles.wrapper}>
+    <div id="wrapper">
       <Hero config={heroConfigs.home} />
     </div>
   );

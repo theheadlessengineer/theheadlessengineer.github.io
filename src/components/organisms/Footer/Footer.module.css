@@ -100,7 +100,7 @@
   }
 
   /* Add bottom padding to body to account for fixed footer */
-  :global(body) {
+  .mobileFooter :global(body) {
     padding-bottom: 70px;
   }
 }

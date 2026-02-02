@@ -1,46 +1,11 @@
-/* Contact page specific styles - Desktop only */
-@media (min-width: 769px) {
-  :global(body.contact-layout .app-layout) {
-    height: 100vh;
-    overflow: hidden;
-  }
-
-  :global(body.contact-layout .main-content) {
-    height: 100vh;
-    overflow-y: auto;
-  }
-
-  .contactPage {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: var(--spacing-lg);
-    background: var(--color-background);
-  }
-}
-
-/* Mobile: Allow normal scrolling */
-@media (max-width: 768px) {
-  :global(body.contact-layout .app-layout) {
-    height: auto;
-    min-height: 100vh;
-  }
-
-  :global(body.contact-layout .main-content) {
-    height: auto;
-    overflow: visible;
-  }
-
-  .contactPage {
-    height: auto;
-    min-height: calc(100vh - 160px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: var(--spacing-lg);
-    background: var(--color-background);
-  }
+/* Contact page specific styles */
+.contactPage {
+  min-height: calc(100vh - 160px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-lg);
+  background: var(--color-background);
 }
 
 .container {
@@ -61,14 +26,14 @@
   font-weight: 900;
   color: var(--color-text);
   margin: 0 0 var(--spacing-md) 0;
-  line-height: var(--line-height-tight);
+  line-height: 1.2;
 }
 
 .subtitle {
   font-size: var(--font-size-base);
   color: var(--color-text-light);
   margin: 0;
-  line-height: var(--line-height-relaxed);
+  line-height: 1.6;
 }
 
 .methodsGrid {
