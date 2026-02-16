@@ -1,21 +1,21 @@
 ---
-title: "Microservices Architecture: Design Patterns and Best Practices"
-slug: "microservices-architecture-guide"
-description: "Master microservices architecture with proven patterns, best practices, and real-world implementation strategies for scalable distributed systems."
-excerpt: "Microservices architecture enables building scalable, maintainable systems through loosely coupled, independently deployable services."
-publishedAt: "2024-02-05"
-updatedAt: "2024-02-05"
+title: "Production-Ready Microservices: Complete Setup Guide for Engineering Leads"
+slug: "production-ready-microservices-setup-guide"
+description: "A complete, opinionated checklist for engineering leads and architects to establish a production-ready microservice architecture — covering planning, infrastructure, CI/CD, security, observability, reliability, developer experience, and governance."
+excerpt: "Setting up microservices for production requires more than splitting a monolith. This guide walks engineering leads through all 43 steps across 9 phases — from domain decomposition to compliance."
+publishedAt: "2026-02-16"
+updatedAt: "2026-02-16"
 category: "software-architecture"
-subcategory: "patterns"
-tags: ["microservices", "distributed-systems", "architecture-patterns", "scalability", "devops"]
+subcategory: "microservices"
+tags: ["microservices", "production-engineering", "kubernetes", "ci-cd", "infrastructure-as-code", "observability", "devops", "platform-engineering", "security", "distributed-systems"]
 author: "Headless Engineer"
-readingTime: 18
+readingTime: 22
 seo:
-  metaTitle: "Microservices Architecture Guide - Patterns & Best Practices"
-  metaDescription: "Learn microservices architecture patterns, design principles, and implementation strategies. Master distributed systems with practical examples and best practices."
-  keywords: ["microservices architecture", "distributed systems", "service mesh", "API gateway", "event-driven architecture"]
-  canonicalUrl: "/blog/software-architecture/patterns/microservices-architecture-guide"
-  ogImage: "/images/blog/microservices-architecture-og.jpg"
+  metaTitle: "Production-Ready Microservices Setup Guide - 43-Step Checklist for Architects"
+  metaDescription: "Complete microservices setup checklist for engineering leads. 43 steps across 9 phases covering IaC, Kubernetes, CI/CD, security, observability, and developer experience."
+  keywords: ["production microservices", "microservices architecture setup", "kubernetes production", "microservices checklist", "platform engineering", "service mesh", "gitops", "microservices security", "distributed systems observability"]
+  canonicalUrl: "/blog/software-architecture/microservices/production-ready-microservices-setup-guide"
+  ogImage: "/images/blog/production-microservices-setup-og.jpg"
 ---
 
 # Microservices Architecture: Design Patterns and Best Practices
