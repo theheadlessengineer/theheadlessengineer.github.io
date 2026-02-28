@@ -1,0 +1,106 @@
+.header {
+  background: var(--color-background);
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: var(--max-width-lg);
+  margin: 0 auto;
+  padding: 0 var(--space-8);
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .container {
+    gap: var(--space-2);
+  }
+}
+
+/* Pipe separators */
+.pipes {
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0,
+    transparent 8px,
+    var(--color-accent) 8px,
+    var(--color-accent) 10px
+  );
+  height: 1em;
+  width: 52px;
+  flex-shrink: 0;
+}
+
+.pipes.small {
+  width: 20px;
+}
+
+/* Spacer to push nav links right */
+.container > :nth-child(3) {
+  flex: 1;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+/* All links base styles */
+.nav a {
+  transition: color 0.15s;
+  text-transform: uppercase;
+}
+
+/* Nav links only (exclude logo) */
+.nav a {
+  color: var(--color-text-secondary);
+}
+
+.nav a:hover {
+  color: var(--color-accent);
+}
+
+.nav a::before {
+  content: '[ ';
+}
+
+.nav a::after {
+  content: ' ]';
+}
+
+/* Mobile responsive */
+@media (max-width: 767px) {
+  .container {
+    flex-wrap: wrap;
+  }
+
+  /* First row: pipes + logo + pipes filling remaining space */
+  .container > :nth-child(1) {
+    width: 60px;
+  }
+
+  .container > :nth-child(3) {
+    flex-grow: 1;
+  }
+
+  /* Nav wrapper on second row */
+  .nav {
+    flex-basis: 100%;
+    gap: var(--space-2);
+  }
+
+  .nav a {
+    font-size: 12px;
+  }
+
+  /* Hide all other pipes */
+  .pipes.small,
+  .pipes.endPipes {
+    display: none;
+  }
+}

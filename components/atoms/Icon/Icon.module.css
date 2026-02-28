@@ -1,0 +1,17 @@
+.icon {
+  font-family: var(--font-mono);
+  color: var(--color-accent);
+  display: inline-block;
+}
+
+.icon.sm {
+  font-size: var(--font-size-lg);
+}
+
+.icon.md {
+  font-size: var(--font-size-2xl);
+}
+
+.icon.lg {
+  font-size: calc(var(--font-size-base) * 2);
+}
