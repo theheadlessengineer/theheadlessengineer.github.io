@@ -1,0 +1,58 @@
+.article {
+  padding: var(--space-8) var(--space-4);
+  max-width: var(--max-width-md);
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: var(--space-8);
+}
+
+.title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-foreground);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.verses {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.verseCard {
+  position: relative;
+  padding: var(--space-6);
+  text-align: center;
+}
+
+.verse {
+  font-size: var(--font-size-lg);
+  line-height: 1.8;
+  color: var(--color-foreground);
+  margin-bottom: var(--space-4);
+  white-space: pre-wrap;
+}
+
+.transliteration {
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: var(--color-muted);
+  font-style: italic;
+  margin-bottom: var(--space-3);
+}
+
+.hindi {
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: var(--color-foreground);
+  margin-bottom: var(--space-3);
+}
+
+.english {
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: var(--color-muted);
+}

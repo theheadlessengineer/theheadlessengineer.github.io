@@ -1,11 +1,11 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import Link from 'next/link';
 import { marked } from 'marked';
 import { getArticleBySlug, getAllArticles } from '@/lib/articles';
 import { siteConfig } from '@/config/site';
 import { articlesConfig } from '@/config/articles';
 import { ArticleContent } from '@/components/molecules/ArticleContent';
+import { BackLink } from '@/components/atoms/BackLink';
 import styles from './article.module.css';
 
 interface ArticlePageProps {
@@ -77,9 +77,7 @@ export default async function ArticlePage({ params }: ArticlePageProps): Promise
 
       <ArticleContent html={htmlContent} className={styles.content} />
 
-      <div className={styles.backLink}>
-        <Link href="/articles">{articlesConfig.backLink.text}</Link>
-      </div>
+      <BackLink href="/articles" text={articlesConfig.backLink.text} />
     </article>
   );
 }

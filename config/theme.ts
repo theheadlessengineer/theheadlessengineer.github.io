@@ -1,32 +1,44 @@
 /**
  * Theme Configuration - SINGLE SOURCE OF TRUTH
- *
- * To change colors:
- * 1. Update values here
- * 2. Update matching values in app/globals.css (lines 7-9 and 28-30)
- * 3. Restart dev server
- *
- * Why two places?
- * - This file: Used by JS/TSX (manifest, OG images, Mermaid)
- * - globals.css: Used by CSS Modules (all components)
- * - CSS can't import from TS, so values must be synced manually
+ * All theme colors are defined here and applied via CSS variables
  */
 
 export const theme = {
   dark: {
-    background: '#0e0f0e', // near-black with micro green tint — screen depth
-    foreground: '#d9e8d9', // phosphor green-white — classic CRT
-    accent: '#50C878', // brand green — untouched ✓
-    muted: '#4d6b4d', // dimmed green — inactive terminal output
-    tertiary: '#1a201a', // panel bg — green-tinted dark
+    background: '#0e0f0e',
+    foreground: '#d9e8d9',
+    accent: '#50C878',
+    muted: '#4d6b4d',
+    tertiary: '#1a201a',
   },
   light: {
-    background: '#edf2ed', // cool green-grey paper (not warm cream)
-    foreground: '#151f15', // deep green-black
-    accent: '#2ea854', // brand green, slightly deeper for light contrast
-    muted: '#6b856b', // mid green-grey
-    tertiary: '#d4e0d4', // cool green-tinted panel
+    background: '#edf2ed',
+    foreground: '#151f15',
+    accent: '#2ea854',
+    muted: '#6b856b',
+    tertiary: '#d4e0d4',
   },
+  light_lux: {
+    background: '#e8e8e6',
+    foreground: '#2a2a2a',
+    accent: '#111110',
+    muted: '#9a9a96',
+    tertiary: '#d4d4d1',
+  },
+  dark_lux: {
+    background: '#161614',
+    foreground: '#d6d6d2',
+    accent: '#e8e8e4',
+    muted: '#5a5a56',
+    tertiary: '#222220',
+  }
 } as const;
 
+export type ThemeName = keyof typeof theme;
 export type Theme = typeof theme;
+
+// Active theme configuration
+export const themeConfig = {
+  activeLight: 'light' as ThemeName,
+  activeDark: 'dark' as ThemeName,
+};
