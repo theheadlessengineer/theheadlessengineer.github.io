@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Source_Code_Pro } from 'next/font/google';
 import { Header } from '@/components/organisms/Header';
 import { Footer } from '@/components/organisms/Footer';
+import { ThemeScript } from '@/components/ThemeScript';
 import { siteConfig } from '@/config/site';
 import './globals.css';
 
@@ -55,6 +56,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={sourceCodePro.variable}>
+      <head>
+        <ThemeScript />
+      </head>
       <body>
         <Header />
         {children}

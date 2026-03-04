@@ -2,15 +2,14 @@
 
 import { useEffect, useState } from 'react';
 import mermaid from 'mermaid';
-import { theme } from '@/config/theme';
+import { theme, type ThemeName } from '@/config/theme';
 
 export function MermaidRenderer() {
-  const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('dark');
+  const [currentTheme, setCurrentTheme] = useState<ThemeName>('dark');
 
   useEffect(() => {
     const updateTheme = () => {
-      const themeValue =
-        document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+      const themeValue = document.documentElement.getAttribute('data-theme') as ThemeName || 'dark';
       setCurrentTheme(themeValue);
     };
 
@@ -27,10 +26,11 @@ export function MermaidRenderer() {
 
   useEffect(() => {
     const colors = theme[currentTheme];
+    const isLight = currentTheme.includes('light');
 
     mermaid.initialize({
       startOnLoad: false,
-      theme: currentTheme === 'light' ? 'default' : 'dark',
+      theme: isLight ? 'default' : 'dark',
       themeVariables: {
         primaryColor: colors.accent,
         primaryTextColor: colors.foreground,
@@ -46,26 +46,21 @@ export function MermaidRenderer() {
       },
     });
 
-    // Find all mermaid code blocks and render them
     const mermaidBlocks = document.querySelectorAll('pre code.language-mermaid');
-    mermaidBlocks.forEach((block, index) => {
+    mermaidBlocks.forEach((block) => {
       const code = block.textContent || '';
       const pre = block.parentElement;
 
       if (pre) {
-        // Create a div to hold the rendered diagram
         const div = document.createElement('div');
         div.className = 'mermaid';
         div.textContent = code;
-
-        // Replace the pre element with the div
         pre.replaceWith(div);
       }
     });
 
-    // Run mermaid on all .mermaid divs
     mermaid.run();
-  }, []);
+  }, [currentTheme]);
 
   return null;
 }
