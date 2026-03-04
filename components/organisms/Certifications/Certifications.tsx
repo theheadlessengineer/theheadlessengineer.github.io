@@ -14,7 +14,7 @@ export interface CertificationsProps {
 }
 
 export function Certifications({
-  title,
+  title: _title,
   description,
   certifications,
 }: CertificationsProps): JSX.Element {

@@ -38,10 +38,12 @@ export function getAllArticles(): readonly Article[] {
         if (article.published !== false) {
           articles.push(article);
         }
-      } catch (error: any) {
+      } catch (error) {
+        // eslint-disable-next-line no-console
         console.error(`\n❌ Validation error in ${filePath}:`);
-        if (error.errors) {
-          error.errors.forEach((err: any) => {
+        if (error && typeof error === 'object' && 'errors' in error) {
+          (error.errors as Array<{ path: string[]; message: string }>).forEach(err => {
+            // eslint-disable-next-line no-console
             console.error(`  - ${err.path.join('.')}: ${err.message}`);
           });
         }

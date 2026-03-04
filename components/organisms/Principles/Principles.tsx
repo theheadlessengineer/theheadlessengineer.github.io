@@ -13,7 +13,7 @@ export interface PrinciplesProps {
   }>;
 }
 
-export function Principles({ title, description, principles }: PrinciplesProps): JSX.Element {
+export function Principles({ title: _title, description, principles }: PrinciplesProps): JSX.Element {
   return (
     <section className={styles.section}>
       <div className={styles.container}>

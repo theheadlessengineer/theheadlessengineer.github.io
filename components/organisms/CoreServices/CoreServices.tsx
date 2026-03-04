@@ -13,7 +13,7 @@ export interface CoreServicesProps {
   }>;
 }
 
-export function CoreServices({ title, description, services }: CoreServicesProps): JSX.Element {
+export function CoreServices({ title: _title, description, services }: CoreServicesProps): JSX.Element {
   return (
     <section className={styles.section}>
       <div className={styles.container}>

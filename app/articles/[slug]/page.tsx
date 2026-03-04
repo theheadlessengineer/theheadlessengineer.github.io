@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
 import { marked } from 'marked';
 import { getArticleBySlug, getAllArticles } from '@/lib/articles';
 import { siteConfig } from '@/config/site';

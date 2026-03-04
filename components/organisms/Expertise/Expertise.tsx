@@ -13,7 +13,7 @@ export interface ExpertiseProps {
   }>;
 }
 
-export function Expertise({ title, description, skills }: ExpertiseProps): JSX.Element {
+export function Expertise({ title: _title, description, skills }: ExpertiseProps): JSX.Element {
   return (
     <section className={styles.section}>
       <div className={styles.container}>

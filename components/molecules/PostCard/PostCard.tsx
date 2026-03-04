@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { Card } from '@/components/atoms/Card';
 import styles from './PostCard.module.css';
 
@@ -19,7 +18,6 @@ export function PostCard({
   category,
   publishedAt,
   readingTime,
-  tags,
 }: PostCardProps): JSX.Element {
   const formattedDate = new Date(publishedAt).toLocaleDateString('en-US', {
     year: 'numeric',
