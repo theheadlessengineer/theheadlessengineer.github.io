@@ -27,7 +27,7 @@ jobs:
           node-version: '18'
           cache: 'npm'
       - run: npm ci
-      - run: echo "Tests temporarily skipped - Task #2 incomplete. Tests need fixture updates."
+      - run: echo "Tests temporarily skipped - see TEST_TODO.md"
       # - run: npm run test
 
   build:
