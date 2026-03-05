@@ -12,11 +12,12 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: false,
   },
-  output: 'standalone',
+  output: 'export', // For GitHub Pages static export
   swcMinify: true,
   images: {
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+    unoptimized: true, // Required for static export
   },
 };
 
