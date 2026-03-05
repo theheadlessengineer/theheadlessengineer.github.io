@@ -17,42 +17,53 @@ export interface Prayer {
 const prayersDirectory = path.join(process.cwd(), 'content/prayers');
 
 export function getAllPrayers(): readonly Prayer[] {
-  const files = fs.readdirSync(prayersDirectory);
-  const prayers: Prayer[] = [];
+  try {
+    const files = fs.readdirSync(prayersDirectory);
+    const prayers: Prayer[] = [];
 
-  files.forEach(file => {
-    if (!file.endsWith('.json')) return;
+    files.forEach(file => {
+      if (!file.endsWith('.json')) return;
 
-    const slug = file.replace('.json', '');
-    const filePath = path.join(prayersDirectory, file);
-    const fileContents = fs.readFileSync(filePath, 'utf8');
-    const data = JSON.parse(fileContents);
+      const slug = file.replace('.json', '');
+      const filePath = path.join(prayersDirectory, file);
 
-    try {
-      const validatedData = prayerSchema.parse(data);
-      prayers.push({
-        slug,
-        title: validatedData.metadata.title,
-        description: validatedData.metadata.description,
-        language: validatedData.metadata.language,
-        author: validatedData.metadata.author,
-        category: validatedData.metadata.category,
-        verses: validatedData.verses,
-      });
-    } catch (error) {
-      // eslint-disable-next-line no-console
-      console.error(`\n❌ Validation error in ${filePath}:`);
-      if (error && typeof error === 'object' && 'errors' in error) {
-        (error.errors as Array<{ path: string[]; message: string }>).forEach(err => {
+      try {
+        const fileContents = fs.readFileSync(filePath, 'utf8');
+        const data = JSON.parse(fileContents);
+
+        try {
+          const validatedData = prayerSchema.parse(data);
+          prayers.push({
+            slug,
+            title: validatedData.metadata.title,
+            description: validatedData.metadata.description,
+            language: validatedData.metadata.language,
+            author: validatedData.metadata.author,
+            category: validatedData.metadata.category,
+            verses: validatedData.verses,
+          });
+        } catch (error) {
           // eslint-disable-next-line no-console
-          console.error(`  - ${err.path.join('.')}: ${err.message}`);
-        });
+          console.error(`\n❌ Validation error in ${filePath}:`);
+          if (error && typeof error === 'object' && 'errors' in error) {
+            (error.errors as Array<{ path: string[]; message: string }>).forEach(err => {
+              // eslint-disable-next-line no-console
+              console.error(`  - ${err.path.join('.')}: ${err.message}`);
+            });
+          }
+          throw new Error(`Invalid prayer data in ${file}`);
+        }
+      } catch (error) {
+        console.error(`Error reading file ${filePath}:`, error);
+        throw error;
       }
-      throw new Error(`Invalid prayer data in ${file}`);
-    }
-  });
+    });
 
-  return prayers.sort((a, b) => a.title.localeCompare(b.title));
+    return prayers.sort((a, b) => a.title.localeCompare(b.title));
+  } catch (error) {
+    console.error('Error reading prayers directory:', error);
+    throw new Error('Failed to load prayers');
+  }
 }
 
 export function getPrayerBySlug(slug: string): Prayer | null {

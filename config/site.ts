@@ -1,7 +1,9 @@
+import { env } from '@/lib/env';
+
 export const siteConfig = {
   logo: 'HeadlessEngineer',
   name: 'Karan Popat',
-  url: 'https://popatkaran.com',
+  url: env.NEXT_PUBLIC_SITE_URL,
   description:
     'Full-stack developer specializing in modern web technologies, creating performant and accessible digital experiences.',
   author: {

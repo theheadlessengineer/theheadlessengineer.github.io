@@ -17,7 +17,9 @@
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
     "workflow": "node workflow/index.js",
-    "workflow:dry": "node workflow/index.js --dry-run"
+    "workflow:dry": "node workflow/index.js --dry-run",
+    "prepare": "husky",
+    "analyze": "ANALYZE=true npm run build"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
@@ -30,6 +32,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.4",
+    "@next/bundle-analyzer": "^16.1.6",
     "@playwright/test": "^1.58.2",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
@@ -40,9 +43,20 @@
     "@types/react-dom": "^18.2.18",
     "eslint": "^8.57.1",
     "eslint-config-next": "^14.2.35",
+    "husky": "^9.1.7",
     "jest": "^30.2.0",
     "jest-environment-jsdom": "^30.2.0",
+    "lint-staged": "^16.3.2",
     "prettier": "^3.8.1",
     "typescript": "^5.3.3"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,css}": [
+      "prettier --write"
+    ]
   }
 }

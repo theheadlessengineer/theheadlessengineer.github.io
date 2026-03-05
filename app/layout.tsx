@@ -3,7 +3,10 @@ import { Source_Code_Pro } from 'next/font/google';
 import { Header } from '@/components/organisms/Header';
 import { Footer } from '@/components/organisms/Footer';
 import { ThemeScript } from '@/components/ThemeScript';
+import { SkipLink } from '@/components/atoms/SkipLink';
+import { WebVitals } from './web-vitals';
 import { siteConfig } from '@/config/site';
+import { env } from '@/lib/env';
 import './globals.css';
 
 const sourceCodePro = Source_Code_Pro({
@@ -49,7 +52,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'your-google-verification-code',
+    google: env.NEXT_PUBLIC_GOOGLE_VERIFICATION || '',
   },
 };
 
@@ -60,8 +63,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeScript />
       </head>
       <body>
+        <WebVitals />
+        <SkipLink />
         <Header />
-        {children}
+        <main id="main-content">{children}</main>
         <Footer />
       </body>
     </html>
