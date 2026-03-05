@@ -29,7 +29,7 @@ const customJestConfig = {
       statements: 90,
     },
   },
-  testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+  testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)', '!**/e2e/**'],
 };
 
 export default createJestConfig(customJestConfig);

@@ -68,10 +68,10 @@ Content 2`;
     expect(screen.getByText('First Article')).toBeInTheDocument();
   });
 
-  it('should display articles in reverse chronological order', () => {
+  it('should display articles', () => {
     render(<ArticlesPage />);
 
-    const articles = screen.getAllByRole('article');
-    expect(articles.length).toBeGreaterThan(0);
+    expect(screen.getByText('Second Article')).toBeInTheDocument();
+    expect(screen.getByText('First Article')).toBeInTheDocument();
   });
 });

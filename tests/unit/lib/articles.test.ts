@@ -60,9 +60,7 @@ seo:
 ---
 Content 2`;
 
-      mockFs.readFileSync
-        .mockReturnValueOnce(article1Content)
-        .mockReturnValueOnce(article2Content);
+      mockFs.readFileSync.mockReturnValueOnce(article1Content).mockReturnValueOnce(article2Content);
 
       const articles = getAllArticles();
 
@@ -107,15 +105,29 @@ Content`;
     it('should skip non-markdown files', () => {
       mockFs.readdirSync.mockReturnValueOnce(['tech'] as any);
       mockFs.statSync.mockReturnValue({ isDirectory: () => true } as any);
-      mockFs.readdirSync.mockReturnValueOnce(['article.md', 'readme.txt', 'backup.md.backup'] as any);
+      mockFs.readdirSync.mockReturnValueOnce([
+        'article.md',
+        'readme.txt',
+        'backup.md.backup',
+      ] as any);
 
       const articleContent = `---
 title: Article
 slug: article
-excerpt: Test
+description: Article description
+excerpt: Test excerpt
 category: tech
 publishedAt: 2026-02-20
+updatedAt: 2026-02-20
 tags: [test]
+author: Test Author
+readingTime: 5
+seo:
+  metaTitle: Article Meta
+  metaDescription: Article meta description
+  keywords: [test]
+  canonicalUrl: /articles/article
+  ogImage: /images/article.jpg
 ---
 Content`;
 
@@ -169,7 +181,7 @@ seo:
 ---
 Content`;
 
-      mockFs.readFileSync.mockReturnValueOnce(content);
+      mockFs.readFileSync.mockReturnValueOnce(articleContent);
     });
 
     it('should return article by slug', () => {

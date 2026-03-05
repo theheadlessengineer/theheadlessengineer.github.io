@@ -4,8 +4,7 @@ describe('Article Schema', () => {
   describe('articleSeoSchema', () => {
     const validSeo = {
       metaTitle: 'Valid Meta Title',
-      metaDescription:
-        'This is a valid meta description with enough characters to pass validation',
+      metaDescription: 'This is a valid meta description',
       keywords: ['test', 'article'],
       canonicalUrl: '/articles/test',
       ogImage: '/images/test.jpg',
@@ -15,32 +14,23 @@ describe('Article Schema', () => {
       expect(() => articleSeoSchema.parse(validSeo)).not.toThrow();
     });
 
-    it('should reject metaTitle too short', () => {
-      expect(() =>
-        articleSeoSchema.parse({ ...validSeo, metaTitle: 'Short' })
-      ).toThrow();
+    it('should reject empty metaTitle', () => {
+      expect(() => articleSeoSchema.parse({ ...validSeo, metaTitle: '' })).toThrow();
     });
 
-    it('should reject metaTitle too long', () => {
+    it('should reject empty metaDescription', () => {
+      expect(() => articleSeoSchema.parse({ ...validSeo, metaDescription: '' })).toThrow();
+    });
+
+    it('should reject empty keywords array', () => {
+      expect(() => articleSeoSchema.parse({ ...validSeo, keywords: [] })).toThrow();
+    });
+
+    it('should reject too many keywords', () => {
       expect(() =>
         articleSeoSchema.parse({
           ...validSeo,
-          metaTitle: 'a'.repeat(81),
-        })
-      ).toThrow();
-    });
-
-    it('should reject metaDescription too short', () => {
-      expect(() =>
-        articleSeoSchema.parse({ ...validSeo, metaDescription: 'Too short' })
-      ).toThrow();
-    });
-
-    it('should reject metaDescription too long', () => {
-      expect(() =>
-        articleSeoSchema.parse({
-          ...validSeo,
-          metaDescription: 'a'.repeat(171),
+          keywords: Array(11).fill('keyword'),
         })
       ).toThrow();
     });

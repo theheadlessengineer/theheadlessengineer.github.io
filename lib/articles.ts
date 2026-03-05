@@ -8,28 +8,21 @@ export type { Article, ArticleFrontmatter };
 const articlesDirectory = path.join(process.cwd(), 'content/articles');
 
 export function getAllArticles(): readonly Article[] {
-  try {
-    const categories = fs.readdirSync(articlesDirectory);
-    const articles: Article[] = [];
+  const articles: Article[] = [];
 
-    categories.forEach(category => {
-      const categoryPath = path.join(articlesDirectory, category);
+  function readArticlesRecursively(dir: string) {
+    const entries = fs.readdirSync(dir);
+
+    entries.forEach(entry => {
+      const fullPath = path.join(dir, entry);
 
       try {
-        if (!fs.statSync(categoryPath).isDirectory()) return;
-      } catch (error) {
-        console.error(`Error reading category ${category}:`, error);
-        return;
-      }
+        const stat = fs.statSync(fullPath);
 
-      const files = fs.readdirSync(categoryPath);
-      files.forEach(file => {
-        if (!file.endsWith('.md') || file.endsWith('.backup')) return;
-
-        const filePath = path.join(categoryPath, file);
-
-        try {
-          const fileContents = fs.readFileSync(filePath, 'utf8');
+        if (stat.isDirectory()) {
+          readArticlesRecursively(fullPath);
+        } else if (entry.endsWith('.md') && !entry.endsWith('.backup')) {
+          const fileContents = fs.readFileSync(fullPath, 'utf8');
           const { data, content } = matter(fileContents);
 
           try {
@@ -39,35 +32,35 @@ export function getAllArticles(): readonly Article[] {
               content,
             };
 
-            // Only include published articles (default to true if not specified)
             if (article.published !== false) {
               articles.push(article);
             }
           } catch (error) {
-            // eslint-disable-next-line no-console
-            console.error(`\n❌ Validation error in ${filePath}:`);
-            if (error && typeof error === 'object' && 'errors' in error) {
-              (error.errors as Array<{ path: string[]; message: string }>).forEach(err => {
-                // eslint-disable-next-line no-console
-                console.error(`  - ${err.path.join('.')}: ${err.message}`);
-              });
+            console.error(`\n❌ Validation error in ${fullPath}:`);
+            if (error && typeof error === 'object' && 'issues' in error) {
+              (error.issues as Array<{ path: (string | number)[]; message: string }>).forEach(
+                issue => {
+                  console.error(`  - ${issue.path.join('.')}: ${issue.message}`);
+                }
+              );
+            } else {
+              console.error(error);
             }
-            throw new Error(`Invalid article frontmatter in ${file}`);
+            throw new Error(`Invalid article frontmatter in ${entry}`);
           }
-        } catch (error) {
-          console.error(`Error reading file ${filePath}:`, error);
-          throw error;
         }
-      });
+      } catch (error) {
+        console.error(`Error processing ${fullPath}:`, error);
+        throw error;
+      }
     });
-
-    return articles.sort(
-      (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
-    );
-  } catch (error) {
-    console.error('Error reading articles directory:', error);
-    throw new Error('Failed to load articles');
   }
+
+  readArticlesRecursively(articlesDirectory);
+
+  return articles.sort(
+    (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+  );
 }
 
 export function getArticleBySlug(slug: string): Article | null {

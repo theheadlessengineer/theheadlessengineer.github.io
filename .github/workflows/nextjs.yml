@@ -68,9 +68,8 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Lint
         run: ${{ steps.detect-package-manager.outputs.runner }} npm run lint
-      # Tests temporarily skipped - Task #2 incomplete
-      # - name: Test
-      #   run: ${{ steps.detect-package-manager.outputs.runner }} npm run test
+      - name: Test
+        run: ${{ steps.detect-package-manager.outputs.runner }} npm run test
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact

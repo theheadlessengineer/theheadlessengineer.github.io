@@ -27,8 +27,7 @@ jobs:
           node-version: '18'
           cache: 'npm'
       - run: npm ci
-      - run: echo "Tests temporarily skipped - see TEST_TODO.md"
-      # - run: npm run test
+      - run: npm run test
 
   build:
     runs-on: ubuntu-latest

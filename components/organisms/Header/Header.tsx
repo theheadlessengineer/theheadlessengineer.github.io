@@ -25,9 +25,6 @@ export function Header(): JSX.Element {
               )}
             </React.Fragment>
           ))}
-          <Link href="/rss.xml" aria-label="RSS Feed">
-            RSS
-          </Link>
         </nav>
         <div className={`${styles.pipes} ${styles.endPipes}`} aria-hidden="true" />
       </div>
