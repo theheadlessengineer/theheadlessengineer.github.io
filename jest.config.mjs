@@ -1,4 +1,4 @@
-const nextJest = require('next/jest');
+import nextJest from 'next/jest.js';
 
 const createJestConfig = nextJest({
   dir: './',
@@ -10,6 +10,7 @@ const customJestConfig = {
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
   },
+  modulePathIgnorePatterns: ['<rootDir>/.next/'],
   collectCoverageFrom: [
     'app/**/*.{js,jsx,ts,tsx}',
     'components/**/*.{js,jsx,ts,tsx}',
@@ -18,7 +19,7 @@ const customJestConfig = {
     '!**/node_modules/**',
     '!**/.next/**',
     '!**/coverage/**',
-    '!**/jest.config.js',
+    '!**/jest.config.mjs',
   ],
   coverageThreshold: {
     global: {
@@ -31,4 +32,4 @@ const customJestConfig = {
   testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
 };
 
-module.exports = createJestConfig(customJestConfig);
+export default createJestConfig(customJestConfig);

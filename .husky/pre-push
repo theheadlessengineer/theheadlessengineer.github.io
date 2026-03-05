@@ -1,1 +1,2 @@
-npm run test
+# Run linting before push
+npm run lint
