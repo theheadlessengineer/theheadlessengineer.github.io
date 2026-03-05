@@ -17,8 +17,10 @@ describe('lib/articles', () => {
   describe('getAllArticles', () => {
     it('should return all published articles sorted by date', () => {
       mockFs.readdirSync.mockReturnValueOnce(['tech'] as any);
-      mockFs.statSync.mockReturnValue({ isDirectory: () => true } as any);
+      mockFs.statSync.mockReturnValueOnce({ isDirectory: () => true } as any);
       mockFs.readdirSync.mockReturnValueOnce(['article1.md', 'article2.md'] as any);
+      mockFs.statSync.mockReturnValueOnce({ isDirectory: () => false } as any);
+      mockFs.statSync.mockReturnValueOnce({ isDirectory: () => false } as any);
 
       const article1Content = `---
 title: Article 1
@@ -71,8 +73,9 @@ Content 2`;
 
     it('should exclude unpublished articles', () => {
       mockFs.readdirSync.mockReturnValueOnce(['tech'] as any);
-      mockFs.statSync.mockReturnValue({ isDirectory: () => true } as any);
+      mockFs.statSync.mockReturnValueOnce({ isDirectory: () => true } as any);
       mockFs.readdirSync.mockReturnValueOnce(['article1.md'] as any);
+      mockFs.statSync.mockReturnValueOnce({ isDirectory: () => false } as any);
 
       const unpublishedContent = `---
 title: Unpublished Article
@@ -104,12 +107,15 @@ Content`;
 
     it('should skip non-markdown files', () => {
       mockFs.readdirSync.mockReturnValueOnce(['tech'] as any);
-      mockFs.statSync.mockReturnValue({ isDirectory: () => true } as any);
+      mockFs.statSync.mockReturnValueOnce({ isDirectory: () => true } as any);
       mockFs.readdirSync.mockReturnValueOnce([
         'article.md',
         'readme.txt',
         'backup.md.backup',
       ] as any);
+      mockFs.statSync.mockReturnValueOnce({ isDirectory: () => false } as any);
+      mockFs.statSync.mockReturnValueOnce({ isDirectory: () => false } as any);
+      mockFs.statSync.mockReturnValueOnce({ isDirectory: () => false } as any);
 
       const articleContent = `---
 title: Article
@@ -141,8 +147,9 @@ Content`;
 
     it('should throw error for invalid frontmatter', () => {
       mockFs.readdirSync.mockReturnValueOnce(['tech'] as any);
-      mockFs.statSync.mockReturnValue({ isDirectory: () => true } as any);
+      mockFs.statSync.mockReturnValueOnce({ isDirectory: () => true } as any);
       mockFs.readdirSync.mockReturnValueOnce(['invalid.md'] as any);
+      mockFs.statSync.mockReturnValueOnce({ isDirectory: () => false } as any);
 
       const invalidContent = `---
 title: Missing Required Fields
@@ -158,8 +165,9 @@ Content`;
   describe('getArticleBySlug', () => {
     beforeEach(() => {
       mockFs.readdirSync.mockReturnValueOnce(['tech'] as any);
-      mockFs.statSync.mockReturnValue({ isDirectory: () => true } as any);
+      mockFs.statSync.mockReturnValueOnce({ isDirectory: () => true } as any);
       mockFs.readdirSync.mockReturnValueOnce(['article.md'] as any);
+      mockFs.statSync.mockReturnValueOnce({ isDirectory: () => false } as any);
 
       const articleContent = `---
 title: Test Article
@@ -202,10 +210,12 @@ Content`;
   describe('getArticlesByCategory', () => {
     beforeEach(() => {
       mockFs.readdirSync.mockReturnValueOnce(['tech', 'design'] as any);
-      mockFs.statSync.mockReturnValue({ isDirectory: () => true } as any);
-      mockFs.readdirSync
-        .mockReturnValueOnce(['tech1.md'] as any)
-        .mockReturnValueOnce(['design1.md'] as any);
+      mockFs.statSync.mockReturnValueOnce({ isDirectory: () => true } as any);
+      mockFs.readdirSync.mockReturnValueOnce(['tech1.md'] as any);
+      mockFs.statSync.mockReturnValueOnce({ isDirectory: () => false } as any);
+      mockFs.statSync.mockReturnValueOnce({ isDirectory: () => true } as any);
+      mockFs.readdirSync.mockReturnValueOnce(['design1.md'] as any);
+      mockFs.statSync.mockReturnValueOnce({ isDirectory: () => false } as any);
 
       const techContent = `---
 title: Tech Article

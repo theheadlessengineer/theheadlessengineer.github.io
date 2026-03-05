@@ -16,7 +16,10 @@ describe('Articles Page', () => {
     mockFs.readdirSync
       .mockReturnValueOnce(['tech'] as any)
       .mockReturnValueOnce(['article1.md', 'article2.md'] as any);
-    mockFs.statSync.mockReturnValue({ isDirectory: () => true } as any);
+    mockFs.statSync
+      .mockReturnValueOnce({ isDirectory: () => true } as any)
+      .mockReturnValueOnce({ isDirectory: () => false } as any)
+      .mockReturnValueOnce({ isDirectory: () => false } as any);
 
     const article1 = `---
 title: First Article
