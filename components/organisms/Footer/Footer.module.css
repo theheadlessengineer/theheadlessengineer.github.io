@@ -18,7 +18,7 @@
 
 .nav {
   display: flex;
-  gap: var(--space-6);
+  gap: var(--space-4);
   flex-wrap: wrap;
 }
 
