@@ -1,0 +1,214 @@
+.article {
+  max-width: var(--max-width-lg);
+  margin: 0 auto;
+  padding: var(--space-8);
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+}
+
+@media (max-width: 767px) {
+  .article {
+    padding: var(--space-8) var(--space-4);
+  }
+}
+
+.content {
+  margin: 2rem 0;
+}
+
+.sidebar {
+  margin: 2rem 0;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Markdown content styling */
+.article :global(div) {
+  line-height: 1.8;
+  color: var(--color-foreground);
+  font-family: var(--font-mono);
+}
+
+.article :global(h1),
+.article :global(h2),
+.article :global(h3),
+.article :global(h4) {
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-4);
+  color: var(--color-foreground);
+  font-family: var(--font-mono);
+  font-weight: var(--font-weight-bold);
+}
+
+.article :global(h1) {
+  font-size: var(--font-size-2xl);
+  border-bottom: 1px solid var(--color-accent);
+  padding-bottom: var(--space-2);
+}
+
+.article :global(h2) {
+  font-size: var(--font-size-xl);
+}
+
+.article :global(h3) {
+  font-size: var(--font-size-lg);
+}
+
+.article :global(h4) {
+  font-size: var(--font-size-base);
+}
+
+.article :global(p) {
+  margin-bottom: var(--space-4);
+}
+
+.article :global(ul),
+.article :global(ol) {
+  margin-bottom: var(--space-4);
+  padding-left: var(--space-8);
+}
+
+.article :global(li) {
+  margin-bottom: var(--space-2);
+}
+
+.article :global(li::marker) {
+  color: var(--color-accent);
+}
+
+.article :global(code) {
+  background: var(--color-background-alt);
+  padding: 2px 6px;
+  border: 1px solid var(--color-border);
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  color: var(--color-accent);
+}
+
+.article :global(pre) {
+  padding: var(--space-4);
+  border: 1px solid var(--color-accent);
+  overflow-x: auto;
+  margin-bottom: var(--space-4);
+}
+
+.article :global(pre code) {
+  background: none;
+  padding: 0;
+  border: none;
+  color: var(--color-foreground);
+}
+
+.article :global(.mermaid) {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-4);
+  margin-bottom: var(--space-4);
+  border: 1px solid var(--color-accent);
+  overflow-x: auto;
+}
+
+.article :global(.mermaid svg) {
+  max-width: 100%;
+  height: auto;
+}
+
+.article :global(blockquote) {
+  border-left: 2px solid var(--color-accent);
+  padding-left: var(--space-4);
+  margin: var(--space-4) 0;
+  color: var(--color-muted);
+}
+
+.article :global(a) {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.article :global(a:hover) {
+  color: var(--color-foreground);
+}
+
+.article :global(hr) {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: var(--space-8) 0;
+}
+
+.article :global(table) {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: var(--space-4);
+  font-family: var(--font-mono);
+}
+
+.article :global(th),
+.article :global(td) {
+  border-left: 1px solid var(--color-accent);
+  border-right: 1px solid var(--color-accent);
+  padding: var(--space-2) var(--space-4);
+  text-align: left;
+}
+
+.article :global(th:first-child),
+.article :global(td:first-child) {
+  border-left: 1px solid var(--color-accent);
+}
+
+.article :global(th:last-child),
+.article :global(td:last-child) {
+  border-right: 1px solid var(--color-accent);
+}
+
+.article :global(thead th) {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent);
+  padding-top: var(--space-3);
+  position: relative;
+}
+
+/* Prayer verse styling */
+.article :global(.verse-container) {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border: 1px solid var(--color-border);
+}
+
+.article :global(.verse-container h3) {
+  color: var(--color-accent);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-family: var(--font-mono);
+}
+
+.article :global(.verse) {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: var(--color-foreground);
+}
+
+.article :global(.transliteration) {
+  font-style: italic;
+  color: var(--color-muted);
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.article :global(.hindi) {
+  color: var(--color-muted);
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.article :global(.english) {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}

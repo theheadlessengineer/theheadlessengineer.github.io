@@ -1,4 +1,5 @@
 import { Card } from '@/components/atoms/Card';
+import { Tag } from '@/components/atoms/Tag';
 import styles from './PostCard.module.css';
 
 export interface PostCardProps {
@@ -18,6 +19,7 @@ export function PostCard({
   category,
   publishedAt,
   readingTime,
+  tags,
 }: PostCardProps): JSX.Element {
   const formattedDate = new Date(publishedAt).toLocaleDateString('en-US', {
     year: 'numeric',
@@ -29,9 +31,14 @@ export function PostCard({
     <Card href={`/articles/${slug}`} title={category}>
       <h3 className={styles.title}>{title}</h3>
       <p className={styles.excerpt}>{excerpt}</p>
+      <div className={styles.tags}>
+        {tags.slice(0, 4).map(tag => (
+          <Tag key={tag}>{tag}</Tag>
+        ))}
+      </div>
       <div className={styles.meta}>
         <span className={styles.date}>{formattedDate}</span>
-        <span className={styles.separator}>•</span>
+        <span className={styles.separator}>·</span>
         <span className={styles.readingTime}>{readingTime} min</span>
       </div>
     </Card>

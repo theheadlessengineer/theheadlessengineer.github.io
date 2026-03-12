@@ -1,0 +1,43 @@
+.header {
+  margin-bottom: 2rem;
+}
+
+.category {
+  margin-bottom: 1rem;
+}
+
+.category a {
+  color: var(--color-foreground);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  transition: color 0.15s linear;
+}
+
+.category a::before {
+  content: '[ ';
+}
+
+.category a::after {
+  content: ' ]';
+}
+
+.category a:hover {
+  color: var(--color-accent);
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 1rem 0;
+  color: var(--text);
+}
+
+.excerpt {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0;
+}

@@ -12,7 +12,7 @@ function getCategories() {
         .split('-')
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
         .join(' ');
-      
+
       categoryMap.set(article.category, {
         name,
         description: `Articles about ${name.toLowerCase()}`,
@@ -31,6 +31,7 @@ export const articlesConfig = {
   backLink: {
     text: 'Back to Articles',
   },
+  itemsPerPage: 2,
   get categories() {
     return getCategories();
   },

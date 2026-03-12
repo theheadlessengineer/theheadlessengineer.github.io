@@ -39,7 +39,7 @@ export default function PrayerPage({ params }: PrayerPageProps): JSX.Element {
 
       <div className={styles.verses}>
         {prayer.verses.map((verse, index) => (
-          <Card key={index} className={styles.verseCard} title={`${index + 1}`}>
+          <Card key={index} title={`${index + 1}`} className={styles.verseCard}>
             <div className={styles.verse}>{verse.verse}</div>
             {verse.transliteration && (
               <div className={styles.transliteration}>{verse.transliteration}</div>

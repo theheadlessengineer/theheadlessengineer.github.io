@@ -32,11 +32,10 @@ export default function ContactPage() {
           <h1 className={styles.title}>{contactConfig.title}</h1>
           <p className={styles.subtitle}>{contactConfig.subtitle}</p>
         </section>
-
         <div className={styles.methodsWrapper}>
           <CardGrid count={contactConfig.methods.length}>
             {contactConfig.methods.map(method => (
-              <ProfileCard key={method.title} {...method} target='_blank'/>
+              <ProfileCard key={method.title} {...method} target="_blank" />
             ))}
           </CardGrid>
         </div>

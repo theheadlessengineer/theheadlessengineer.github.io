@@ -1,0 +1,28 @@
+.verseCard {
+  margin-bottom: 1.5rem;
+}
+
+.verse {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.transliteration {
+  font-style: italic;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.hindi {
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.english {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}

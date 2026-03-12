@@ -1,13 +1,10 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import Link from 'next/link';
 import { marked } from 'marked';
 import { getArticleBySlug, getAllArticles } from '@/lib/articles';
 import { siteConfig } from '@/config/site';
 import { articlesConfig } from '@/config/articles';
-import { ArticleContent } from '@/components/molecules/ArticleContent';
-import { BackLink } from '@/components/atoms/BackLink';
-import styles from './article.module.css';
+import { ContentDetail } from '@/components/organisms/ContentDetail';
 
 interface ArticlePageProps {
   params: { slug: string };
@@ -28,7 +25,10 @@ marked.use({
 
 export async function generateStaticParams() {
   const articles = getAllArticles();
-  return articles.map(article => ({ slug: article.slug }));
+  // Filter out reserved route names to avoid conflicts
+  return articles
+    .map(article => ({ slug: article.slug }))
+    .filter(a => a.slug !== 'page' && a.slug !== 'category' && a.slug !== 'tag');
 }
 
 export async function generateMetadata({ params }: ArticlePageProps): Promise<Metadata> {
@@ -92,29 +92,24 @@ export default async function ArticlePage({ params }: ArticlePageProps): Promise
   };
 
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
-      <article className={styles.article}>
-        <header className={styles.header}>
-          <div className={styles.category}>
-            <Link href={`/articles/category/${article.category}`}>{article.category}</Link>
-          </div>
-          <h1 className={styles.title}>{article.title}</h1>
-          <p className={styles.excerpt}>{article.excerpt}</p>
-          <div className={styles.meta}>
-            <span className={styles.date}>{formattedDate}</span>
-            <span className={styles.separator}>•</span>
-            <span className={styles.readingTime}>{article.readingTime} min read</span>
-          </div>
-        </header>
-
-        <ArticleContent html={htmlContent} className={styles.content} />
-
-        <BackLink href="/articles" text={articlesConfig.backLink.text} />
-      </article>
-    </>
+    <ContentDetail
+      header={{
+        category: {
+          name: article.category,
+          href: `/articles/category/${article.category}`,
+        },
+        title: article.title,
+        excerpt: article.excerpt,
+        metaItems: [formattedDate, `${article.readingTime} min read`],
+        tags: article.tags,
+        tagBasePath: '/articles/tag',
+      }}
+      content={htmlContent}
+      backLink={{
+        href: '/articles',
+        text: articlesConfig.backLink.text,
+      }}
+      jsonLd={articleSchema}
+    />
   );
 }

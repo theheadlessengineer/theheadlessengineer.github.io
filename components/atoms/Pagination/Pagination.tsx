@@ -15,17 +15,24 @@ export function Pagination({
   if (totalPages <= 1) return null;
 
   const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
-  const isArticlesPage = basePath === '/articles/page';
-  const isCategoryPage = basePath.startsWith('/articles/category/');
+
+  // Check if it's a main listing page, category page, or tag page
+  const isMainPage = basePath === '/articles/page' || basePath === '/projects/page';
+  const isCategoryPage =
+    basePath.startsWith('/articles/category/') || basePath.startsWith('/projects/category/');
+  const isTagPage = basePath.startsWith('/articles/tag/') || basePath.startsWith('/projects/tag/');
 
   const getPageHref = (page: number) => {
-    if (isArticlesPage) {
-      return page === 1 ? '/articles' : `${basePath}/${page}`;
+    if (isMainPage) {
+      // For main pages: /articles or /projects for page 1, /articles/page/2 or /projects/page/2 for others
+      const mainPath = basePath.replace('/page', '');
+      return page === 1 ? mainPath : `${basePath}/${page}`;
     }
-    if (isCategoryPage) {
+    if (isCategoryPage || isTagPage) {
+      // For category/tag pages: /articles/category/slug or /projects/tag/slug for page 1
       return page === 1 ? basePath : `${basePath}/${page}`;
     }
-    return `${basePath}?page=${page}`;
+    return `${basePath}/${page}`;
   };
 
   return (
