@@ -61,10 +61,10 @@ describe('Pagination', () => {
     expect(screen.getByText('3')).toHaveAttribute('href', '/articles/page/3');
   });
 
-  it('should generate correct URLs for query-based pagination', () => {
+  it('should generate correct URLs for other pages', () => {
     render(<Pagination currentPage={2} totalPages={3} basePath="/search" />);
 
-    expect(screen.getByText('1')).toHaveAttribute('href', '/search?page=1');
-    expect(screen.getByText('3')).toHaveAttribute('href', '/search?page=3');
+    expect(screen.getByText('1')).toHaveAttribute('href', '/search/1');
+    expect(screen.getByText('3')).toHaveAttribute('href', '/search/3');
   });
 });

@@ -13,7 +13,7 @@ describe('Projects Page', () => {
   beforeEach(() => {
     jest.clearAllMocks();
 
-    mockFs.readdirSync.mockReturnValueOnce(['project1.md', 'project2.md'] as any);
+    mockFs.readdirSync.mockReturnValue(['project1.md', 'project2.md'] as any);
     mockFs.statSync
       .mockReturnValueOnce({ isDirectory: () => false } as any)
       .mockReturnValueOnce({ isDirectory: () => false } as any);
@@ -23,7 +23,7 @@ title: neural-mesh
 slug: neural-mesh
 description: Distributed neural network inference runtime
 excerpt: Low-latency distributed runtime for neural network inference
-language: Rust
+category: Rust
 status: active
 license: MIT
 lastCommit: 2 days ago
@@ -39,14 +39,14 @@ seo:
   canonicalUrl: /projects/neural-mesh
   ogImage: /images/neural-mesh.jpg
 ---
-Content 1`;
+Content 1 with enough text to meet the minimum 100 character requirement for project content validation`;
 
     const project2 = `---
 title: kvault
 slug: kvault
 description: Distributed key-value store
 excerpt: Distributed key-value store built on Raft consensus
-language: Go
+category: Go
 status: active
 license: Apache 2.0
 lastCommit: 1 week ago
@@ -62,7 +62,7 @@ seo:
   canonicalUrl: /projects/kvault
   ogImage: /images/kvault.jpg
 ---
-Content 2`;
+Content 2 with enough text to meet the minimum 100 character requirement for project content validation`;
 
     mockFs.readFileSync.mockReturnValueOnce(project1).mockReturnValueOnce(project2);
   });
