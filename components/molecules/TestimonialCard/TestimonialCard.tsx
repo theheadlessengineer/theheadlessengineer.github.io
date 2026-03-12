@@ -12,7 +12,7 @@ export interface TestimonialCardProps {
 }
 
 export function TestimonialCard({
-  slug,
+  slug: _slug,
   title,
   excerpt,
   author,

@@ -9,6 +9,10 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   children: React.ReactNode;
   /** Optional href to render as link instead of button */
   href?: string;
+  /** Link target attribute (only used when href is provided) */
+  target?: string;
+  /** Link rel attribute (only used when href is provided) */
+  rel?: string;
 }
 
 /**
@@ -26,13 +30,15 @@ export function Button({
   variant = 'primary',
   children,
   href,
+  target,
+  rel,
   ...props
 }: ButtonProps): JSX.Element {
   const className = cn(styles.button, variant && styles[variant]);
 
   if (href) {
     return (
-      <Link href={href} className={className}>
+      <Link href={href} className={className} target={target} rel={rel}>
         {children}
       </Link>
     );

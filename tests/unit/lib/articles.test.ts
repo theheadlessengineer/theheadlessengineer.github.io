@@ -146,6 +146,8 @@ Content`;
     });
 
     it('should throw error for invalid frontmatter', () => {
+      const consoleErrorSpy = jest.spyOn(console, 'error').mockImplementation();
+
       mockFs.readdirSync.mockReturnValueOnce(['tech'] as any);
       mockFs.statSync.mockReturnValueOnce({ isDirectory: () => true } as any);
       mockFs.readdirSync.mockReturnValueOnce(['invalid.md'] as any);
@@ -159,6 +161,8 @@ Content`;
       mockFs.readFileSync.mockReturnValueOnce(invalidContent);
 
       expect(() => getAllArticles()).toThrow('Invalid article frontmatter');
+
+      consoleErrorSpy.mockRestore();
     });
   });
 
